@@ -1,0 +1,124 @@
+@media (max-width: 992px) {
+  .hero-flex,
+  .about-flex,
+  .footer-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .text,
+  .about-text,
+  .hero .image,
+  .about-images,
+  .footer-brand,
+  .footer-links {
+    width: 100%;
+  }
+
+  .menu-items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .partner-logos {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .trust-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .menu-bar {
+    padding: 10px 0;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-brand {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .trust-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 calc(45% - 20px);
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .trust-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .trust-heading {
+    font-size: 32px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-desc {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .number {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    top: -22px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+  }
+
+  .trust-heading {
+    font-size: 26px;
+  }
+}
+
+
