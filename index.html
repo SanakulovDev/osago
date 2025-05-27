@@ -6,6 +6,7 @@
   <title>EL Sug'urta</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
   <header class="header">
@@ -17,12 +18,14 @@
         <a href="#" class="nav-link active">Asosiy sahifa</a>
         <a href="#" class="nav-link">Biz haqimizda</a>
         <a href="#" class="nav-link">Hamkorlar</a>
-        <a href="#" class="nav-link">Tezkor xizmat</a>
+        <a id="fastServiceModalOpen" href="#" class="nav-link">Tezkor xizmat</a>
         <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
       </nav>
       <div class="header-controls">
         <div class="lang-select">UZ</div>
-        <div class="user-icon"></div>
+        <div class="user-icon">
+          <img src="/assets/images/user.svg" alt="user image">
+        </div>
       </div>
     </div>
   </header>
@@ -30,11 +33,41 @@
   <div class="menu-bar">
     <div class="container menu-items">
       <div class="menu-item">OSAGO</div>
-      <div class="menu-item">Sayohat sug’urtasi</div>
-      <div class="menu-item">Baxtsiz hodisalardan sug’urta</div>
-      <div class="menu-item">KASKO</div>
-      <div class="menu-item">Mol-Mulk</div>
-      <div class="menu-item">Sportchilar sug’urtasi</div>
+      <div class="menu-item">
+        Sayohat sug’urtasi
+        <div class="menu-soon-badge" style="display:none;">
+          Tez kunda
+          <span class="menu-soon-arrow"></span>
+        </div>
+      </div>
+      <div class="menu-item">
+        Baxtsiz hodisalardan sug’urta
+        <div class="menu-soon-badge" style="display:none;">
+          Tez kunda
+          <span class="menu-soon-arrow"></span>
+        </div>
+      </div>
+      <div class="menu-item">
+        KASKO
+        <div class="menu-soon-badge" style="display:none;">
+          Tez kunda
+          <span class="menu-soon-arrow"></span>
+        </div>
+      </div>
+      <div class="menu-item">
+        Mol-Mulk
+        <div class="menu-soon-badge" style="display:none;">
+          Tez kunda
+          <span class="menu-soon-arrow"></span>
+        </div>
+      </div>
+      <div class="menu-item">
+        Sportchilar sug’urtasi
+        <div class="menu-soon-badge" style="display:none;">
+          Tez kunda
+          <span class="menu-soon-arrow"></span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -82,7 +115,9 @@
 
   <section class="trust">
     <div class="container">
-      <h2 class="trust-heading"><span class="green">Nega bizga</span> ishonishingiz mumkin?</h2>
+      <h2 class="trust-heading">
+        <span class="trust-green">Nega bizga</span> ishonishingiz mumkin?
+      </h2>
       <br>
       <div class="trust-cards">
         <div class="card">
@@ -150,5 +185,65 @@
       <p>© “elsu.uz”, 2025 Barcha huquqlar himoyalangan.</p>
     </div>
   </footer>
+
+  <div id="fastServiceModal" class="fast-serves-modal">
+    <div class="fast-modal-content">
+      <div class="fast-service-grid">
+        <div class="fast-service-card">
+          <div class="fast-service-title">Yevroprotokol</div>
+          <div class="fast-service-desc">Yevroprotokol to'ldirish namunasi</div>
+          <button class="fast-service-btn">Foydalanish</button>
+          <div class="soon-badge" style="display:none;">
+            Tez kunda
+            <span class="soon-arrow"></span>
+          </div>
+        </div>
+        <div class="fast-service-card">
+          <div class="fast-service-title">Evakuator chaqirish</div>
+          <div class="fast-service-desc">Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor yordam chaqirish xizmati.</div>
+          <button class="fast-service-btn" id="towtruckBtn">Foydalanish</button>
+        </div>
+        <div class="fast-service-card">
+          <div class="fast-service-title">Benzin</div>
+          <div class="fast-service-desc">Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent shahri va atrofi bo‘yicha)</div>
+          <button class="fast-service-btn">Foydalanish</button>
+          <div class="soon-badge" style="display:none;">
+            Tez kunda
+            <span class="soon-arrow"></span>
+          </div>
+        </div>
+        <div class="fast-service-card">
+          <div class="fast-service-title">Baholash</div>
+          <div class="fast-service-desc">Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va baholovchi bilan bog‘laning</div>
+          <button class="fast-service-btn">Foydalanish</button>
+          <div class="soon-badge" style="display:none;">
+            Tez kunda
+            <span class="soon-arrow"></span>
+          </div>
+        </div>
+      </div>
+      <button id="fastServiceModalClose"><img src="/assets/images/close.svg" alt="Close"></button>
+    </div>
+  </div>
+
+  <!-- Evakuator chaqirish modal -->
+  <div id="towtruckModal" class="towtruck-modal" style="display:none;">
+    <div class="towtruck-modal-content">
+      <button id="towtruckModalClose" class="towtruck-modal-close">
+        <img src="/assets/images/close.svg" alt="Close">
+      </button>
+      <h2>Evakuator chaqirish</h2>
+      <p>Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon raqamingizni kiriting.</p>
+      <form class="towtruck-form">
+        <input type="text" placeholder="Ism familiya" class="towtruck-input"/>
+        <div class="towtruck-phone-row">
+          <span class="towtruck-phone-prefix">+998</span>
+          <input type="tel" placeholder="Telefon raqam" class="towtruck-input-phone" maxlength="9" />
+        </div>
+        <button type="submit" class="towtruck-submit" disabled>Davom etish</button>
+      </form>
+    </div>
+  </div>
+  <script src="/js/script.js"></script>
 </body>
 </html>
