@@ -19,17 +19,19 @@ function validateInputs() {
   if (carNumber.value.trim().length < 5) valid = false;
   if (texSeriya.value.trim().length !== 2) valid = false;
   if (texRaqam.value.trim().length < 5) valid = false;
-  // ...bu yerda davom ettirish tugmasi yo'q, passport form validatsiyasi alohida
+  // Passport inputlar ham to'ldirilgan bo'lishi kerak
+  if (passportSeriya.value.trim().length !== 2) valid = false;
+  if (passportRaqam.value.trim().length < 7) valid = false;
+  // Faqat hammasi to'g'ri bo'lsa, davom etish tugmasi faollashadi
+  passportNextBtn.disabled = !valid;
+  passportNextBtn.style.background = valid ? '#02C463' : '#BDBDBD';
+  passportNextBtn.style.cursor = valid ? 'pointer' : 'not-allowed';
 }
 
 // Pasport formasi validatsiyasi
 function validatePassport() {
-  let valid = true;
-  if (passportSeriya.value.trim().length !== 2) valid = false;
-  if (passportRaqam.value.trim().length < 7) valid = false;
-  passportNextBtn.disabled = !valid;
-  passportNextBtn.style.background = valid ? '#02C463' : '#BDBDBD';
-  passportNextBtn.style.cursor = valid ? 'pointer' : 'not-allowed';
+  // validateInputs() ni chaqiramiz, chunki barcha inputlar tekshiriladi
+  validateInputs();
 }
 
 carNumber.addEventListener('input', validateInputs);
@@ -43,21 +45,26 @@ form.addEventListener('submit', function(e) {
   e.preventDefault();
   // Stepperda 2-stepni active qilish
   stepper[1].classList.add('active');
-  // Pasport inputlarini ochiq qoldirish (endi disabled emas)
   passportSeriya.focus();
 });
 
 passportForm.addEventListener('submit', function(e) {
+  // Faqat barcha inputlar to'ldirilgan bo'lsa submit ishlaydi
+  if (
+    carNumber.value.trim().length < 5 ||
+    texSeriya.value.trim().length !== 2 ||
+    texRaqam.value.trim().length < 5 ||
+    passportSeriya.value.trim().length !== 2 ||
+    passportRaqam.value.trim().length < 7
+  ) {
+    e.preventDefault();
+    return;
+  }
   e.preventDefault();
-  // Stepperda 2-stepni active qilish (faqat 2 ta chiziq bo'ladi)
   stepper[1].classList.add('active');
-  // 3-chiziq yo'q, shuning uchun stepper[2] ishlatilmaydi
-  // Qo'ng'iroq blokini yashirish, summary blokini ko'rsatish
   callBlock.style.display = 'none';
   summaryBlock.style.display = 'block';
-  // Ma'lumotlarni chiqarish
   summaryNumber.textContent = carNumber.value.toUpperCase();
-  // Mashina modelini avtomatik olish uchun backend kerak, hozircha LACETTI qoldiriladi
   // summaryModel.textContent = ...;
 });
 
