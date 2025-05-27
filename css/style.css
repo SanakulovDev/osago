@@ -91,6 +91,7 @@
     border-radius: 10px;
     position: relative;
     cursor: pointer;
+    text-decoration: none;
   }
   .menu-soon-badge {
     display: flex;
@@ -272,6 +273,9 @@
     display: flex;
     justify-content: space-between;
   }
+  .social-icons {
+    margin-top: 17px;
+  }
   .footer-links .column {
     display: flex;
     flex-direction: column;
@@ -425,3 +429,7 @@
     font-weight: 700;
   }
 
+.active_navbar {
+  background-color: #fff;
+  color: #02C463;
+}
