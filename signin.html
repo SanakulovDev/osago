@@ -30,6 +30,18 @@
       </div>
     </div>
   </header>
+  <div class="menu-bar">
+    <div class="container">
+      <div class="menu-items">
+        <div class="menu-item"><a href="/osago.html" class="menu-item">OSAGO</a></div>
+        <div class="menu-item">Sayohat sug‘urtasi <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item">Baxtsiz hodisalardan sug‘urta <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item">KASKO <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item">Mol-mulk <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item">Sportchilar sug’urtasi<span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
     <h2 class="signin-title">Profilga <span>kirish</span></h2>
@@ -73,6 +85,64 @@
   </div>
 </div>
 
+  <div id="fastServiceModal" class="fast-serves-modal">
+    <div class="fast-modal-content">
+      <div class="fast-service-grid">
+        <div class="fast-service-card">
+          <div class="fast-service-title">Yevroprotokol</div>
+          <div class="fast-service-desc">Yevroprotokol to'ldirish namunasi</div>
+          <button class="fast-service-btn">Foydalanish</button>
+          <div class="soon-badge" style="display:none;">
+            Tez kunda
+            <span class="soon-arrow"></span>
+          </div>
+        </div>
+        <div class="fast-service-card">
+          <div class="fast-service-title">Evakuator chaqirish</div>
+          <div class="fast-service-desc">Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor yordam chaqirish xizmati.</div>
+          <button class="fast-service-btn" id="towtruckBtn">Foydalanish</button>
+        </div>
+        <div class="fast-service-card">
+          <div class="fast-service-title">Benzin</div>
+          <div class="fast-service-desc">Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent shahri va atrofi bo‘yicha)</div>
+          <button class="fast-service-btn">Foydalanish</button>
+          <div class="soon-badge" style="display:none;">
+            Tez kunda
+            <span class="soon-arrow"></span>
+          </div>
+        </div>
+        <div class="fast-service-card">
+          <div class="fast-service-title">Baholash</div>
+          <div class="fast-service-desc">Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va baholovchi bilan bog‘laning</div>
+          <button class="fast-service-btn">Foydalanish</button>
+          <div class="soon-badge" style="display:none;">
+            Tez kunda
+            <span class="soon-arrow"></span>
+          </div>
+        </div>
+      </div>
+      <button id="fastServiceModalClose"><img src="/assets/images/close.svg" alt="Close"></button>
+    </div>
+  </div>
+  <!-- Evakuator chaqirish modal (index.html dagidek) -->
+  <div id="towtruckModal" class="towtruck-modal" style="display:none;">
+    <div class="towtruck-modal-content">
+      <button id="towtruckModalClose" class="towtruck-modal-close">
+        <img src="/assets/images/close.svg" alt="Close">
+      </button>
+      <h2>Evakuator chaqirish</h2>
+      <p>Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon raqamingizni kiriting.</p>
+      <form class="towtruck-form">
+        <input type="text" placeholder="Ism familiya" class="towtruck-input"/>
+        <div class="towtruck-phone-row">
+          <span class="towtruck-phone-prefix">+998</span>
+          <input type="tel" placeholder="Telefon raqam" class="towtruck-input-phone" maxlength="9" />
+        </div>
+        <button type="submit" class="towtruck-submit" disabled>Davom etish</button>
+      </form>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container footer-flex">
       <div class="footer-brand">
@@ -106,5 +176,6 @@
     </div>
   </footer>
   <script src="/js/signin.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 </html>

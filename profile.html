@@ -4,9 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/profile.css">
+     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
-    
+     <header class="header">
+    <div class="container header-inner">
+     <div class="logo">
+        <a class="logo-link" href="/index.html"><span class="logo-bold">EL </span><span class="logo-green">SUG’URTA</span></a>
+      </div>
+      <nav class="main-nav">
+        <a href="/index.html" class="nav-link">Asosiy sahifa</a>
+        <a href="#" class="nav-link">Biz haqimizda</a>
+        <a href="#" class="nav-link">Hamkorlar</a>
+        <a id="fastServiceModalOpen" href="#" class="nav-link">Tezkor xizmat</a>
+        <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
+      </nav>
+      <div class="header-controls">
+        <div class="lang-select">UZ</div>
+        <div class="user-icon">
+          <img src="/assets/images/user.svg" alt="user image">
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="menu-bar">
+    <div class="container">
+      <div class="menu-items">
+        <div class="menu-item"><a href="/osago.html" class="menu-item">OSAGO</a></div>
+        <div class="menu-item">Sayohat sug‘urtasi <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item">Baxtsiz hodisalardan sug‘urta <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item">KASKO <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item">Mol-mulk <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item">Sportchilar sug’urtasi<span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-page container">
+    <div class="profile-sidebar">
+      <button class="profile-menu active">Ma'lumotlarim</button>
+      <button class="profile-menu">Sug'urtalarim</button>
+      <button class="logout-btn">Tizimdan chiqish <span><img class="logout-icon" src="/assets/images/exit.png" alt="exit"></span></button>
+    </div>
+    <div class="profile-main">
+      <div class="profile-info-header">
+        <span class="profile-info-title">Ma’lumotlarim</span>
+        <button class="profile-edit-btn"><img src="/assets/images/edit.png" alt="Edit"></button>
+      </div>
+      <div class="profile-info-content">
+        <div class="profile-avatar">
+          <div class="profile-avatar-inner">
+            <img id="profileMainAvatarImg" src="/assets/images/user.svg" alt="User photo">
+            <label for="profileEditAvatarInput" class="profile-avatar-camera-bg" style="cursor:pointer;">
+              <img src="/assets/images/camera.png" alt="Camera">
+            </label>
+          </div>
+          <div class="profile-avatar-id">ID: 451 458 867</div>
+        </div>
+        <div class="profile-details">
+          <div><span class="profile-label">Ism Familiya</span><span class="profile-value">Sitrizaev To'liqın</span></div>
+          <div><span class="profile-label">Tug‘ilgan sana</span><span class="profile-value">00/00/0000</span></div>
+          <div><span class="profile-label">Telefon raqam</span><span class="profile-value">+998 77 404 40 40</span></div>
+          <div><span class="profile-label">Jins</span><span class="profile-value">Erkak</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-contact">
+      <div class="profile-contact-title">Qo‘ng‘iroq qiling:</div>
+      <a href="tel:+9987740404040" class="profile-contact-phone">+998 77 404 40 40</a>
+    </div>
+  </div>
+
+   <footer class="footer">
+    <div class="container footer-flex">
+      <div class="footer-brand">
+        <div class="logo"><span class="logo-bold">EL </span><span class="logo-green">SUG’URTA</span></div>
+        <p>Sug’urta bo’yicha haqiqiy yordamchingiz</p>
+        <a href="tel:+99877404040" class="footer-phone">+998 77 404 40 40</a>
+        <div class="social-icons">
+            <img src="assets/images/insta.png" alt="Instagram">
+            <img src="assets/images/telegram.png" alt="Telegram">
+            <img src="assets/images/youtube.png" alt="YouTube">
+            <img src="assets/images/tiktok.png" alt="TikTok">
+            <img src="assets/images/fb.png" alt="Facebook">
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="column">
+          <a href="/index.html">Asosiy sahifa</a>
+          <a href="/osago.html">OSAGO</a>
+          <a href="#">Sayohat</a>
+          <a href="#">Hamkorlik</a>
+        </div>
+        <div class="column">
+          <h4>Mijozlarni Qo‘llab-Quvvatlash</h4>
+          <a href="#">Tez-tez so‘raladigan savollar</a>
+          <a href="#">Maxfiylik siyosati</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© “elsu.uz”, 2025 Barcha huquqlar himoyalangan.</p>
+    </div>
+  </footer>
+
+  <div id="fastServiceModal" class="fast-serves-modal">
+    <div class="fast-modal-content">
+      <div class="fast-service-grid">
+        <div class="fast-service-card">
+          <div class="fast-service-title">Yevroprotokol</div>
+          <div class="fast-service-desc">Yevroprotokol to'ldirish namunasi</div>
+          <button class="fast-service-btn">Foydalanish</button>
+          <div class="soon-badge" style="display:none;">
+            Tez kunda
+            <span class="soon-arrow"></span>
+          </div>
+        </div>
+        <div class="fast-service-card">
+          <div class="fast-service-title">Evakuator chaqirish</div>
+          <div class="fast-service-desc">Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor yordam chaqirish xizmati.</div>
+          <button class="fast-service-btn" id="towtruckBtn">Foydalanish</button>
+        </div>
+        <div class="fast-service-card">
+          <div class="fast-service-title">Benzin</div>
+          <div class="fast-service-desc">Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent shahri va atrofi bo‘yicha)</div>
+          <button class="fast-service-btn">Foydalanish</button>
+          <div class="soon-badge" style="display:none;">
+            Tez kunda
+            <span class="soon-arrow"></span>
+          </div>
+        </div>
+        <div class="fast-service-card">
+          <div class="fast-service-title">Baholash</div>
+          <div class="fast-service-desc">Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va baholovchi bilan bog‘laning</div>
+          <button class="fast-service-btn">Foydalanish</button>
+          <div class="soon-badge" style="display:none;">
+            Tez kunda
+            <span class="soon-arrow"></span>
+          </div>
+        </div>
+      </div>
+      <button id="fastServiceModalClose"><img src="/assets/images/close.svg" alt="Close"></button>
+    </div>
+  </div>
+  <!-- Evakuator chaqirish modal (index.html dagidek) -->
+  <div id="towtruckModal" class="towtruck-modal" style="display:none;">
+    <div class="towtruck-modal-content">
+      <button id="towtruckModalClose" class="towtruck-modal-close">
+        <img src="/assets/images/close.svg" alt="Close">
+      </button>
+      <h2>Evakuator chaqirish</h2>
+      <p>Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon raqamingizni kiriting.</p>
+      <form class="towtruck-form">
+        <input type="text" placeholder="Ism familiya" class="towtruck-input"/>
+        <div class="towtruck-phone-row">
+          <span class="towtruck-phone-prefix">+998</span>
+          <input type="tel" placeholder="Telefon raqam" class="towtruck-input-phone" maxlength="9" />
+        </div>
+        <button type="submit" class="towtruck-submit" disabled>Davom etish</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="profileEditModal" class="profile-edit-modal" style="display:none;">
+    <div class="profile-edit-modal-content">
+      <button class="profile-edit-modal-close"><img src="/assets/images/close.svg" alt="Close"></button>
+      <h2 class="profile-edit-modal-title">Shaxsiy ma'lumotlarni o'zgartirish</h2>
+      <div class="profile-edit-avatar-block">
+        <div class="profile-edit-avatar-wrapper">
+          <img id="profileEditAvatarImg" src="/assets/images/user.svg" alt="User" class="profile-edit-avatar-img">
+          <label for="profileEditAvatarInput" class="profile-edit-avatar-camera-bg">
+            <img src="/assets/images/camera.png" alt="Camera">
+          </label>
+          <input type="file" id="profileEditAvatarInput" accept="image/*" style="display:none;">
+          <button id="profileEditAvatarRemove" class="profile-edit-avatar-remove" title="Rasmni o'chirish">✕</button>
+        </div>
+      </div>
+      <form id="profileEditForm" class="profile-edit-form">
+        <div class="profile-edit-form-group">
+          <label>Ism Familiya</label>
+          <input type="text" id="profileEditName" value="Sitrizaev To'liqın" required autocomplete="name">
+        </div>
+        <div class="profile-edit-form-group">
+          <label>Tug‘ilgan sana</label>
+          <input type="date" id="profileEditBirth" value="" required autocomplete="bday" style="appearance: none; -webkit-appearance: none; background: #fafbfc; border: 1.5px solid #e0e0e0; border-radius: 8px; padding: 10px 15px 10px 12px; font-size: 15px; outline: none; transition: border 0.2s;">
+        </div>
+        <div class="profile-edit-form-group">
+          <label>Telefon raqam</label>
+          <div class="profile-edit-phone-row">
+            <span class="profile-edit-phone-prefix">+998</span>
+            <input type="tel" id="profileEditPhone" value="77 404 40 40" required autocomplete="tel" maxlength="9" style="padding-left: 8px;">
+          </div>
+        </div>
+        <div class="profile-edit-form-group">
+          <label>Jins</label>
+          <div class="profile-edit-gender-group">
+            <button type="button" class="profile-edit-gender-btn active" data-gender="Erkak">Erkak</button>
+            <button type="button" class="profile-edit-gender-btn" data-gender="Ayol">Ayol</button>
+          </div>
+        </div>
+        <button type="submit" class="profile-edit-save-btn">Saqlash</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Phone verification modal (like signin.html) -->
+  <div id="profilePhoneCodeModal" class="modal">
+    <div class="modal-content">
+      <span id="closeProfilePhoneCodeModal" class="close">&times;</span>
+      <div class="signin-card-title" style="margin-top:0;">Kodini kiriting</div>
+      <div style="font-size:13px;margin-bottom:18px;">Telefonni tasdiqlash uchun <span id="profileModalPhoneNumber">+998 77 404 40 40</span> raqamiga kod yuborildi.</div>
+      <form id="profilePhoneCodeForm" autocomplete="off">
+        <div style="display:flex;gap:10px;justify-content:center;margin-bottom:18px;">
+          <input maxlength="1" class="signin-phone-code profile-code-input" style="width:48px;" required>
+          <input maxlength="1" class="signin-phone-code profile-code-input" style="width:48px;" required>
+          <input maxlength="1" class="signin-phone-code profile-code-input" style="width:48px;" required>
+          <input maxlength="1" class="signin-phone-code profile-code-input" style="width:48px;" required>
+        </div>
+        <div id="profilePhoneCodeTimer" style="text-align:center;margin-bottom:18px;">60 Sekund</div>
+        <button type="submit" class="signin-btn" style="background:#aaa;cursor:not-allowed;" disabled id="profilePhoneCodeConfirmBtn">Tasdiqlash</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/profile.js"></script>
 </body>
 </html>
