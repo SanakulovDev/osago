@@ -130,3 +130,56 @@ menuItems.forEach((item, idx) => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const burgerBtn = document.getElementById('burgerMenuBtn');
+  const sidebar = document.querySelector('.sidebar-menu');
+  const overlay = document.querySelector('.sidebar-overlay');
+  const closeBtn = document.querySelector('.sidebar-close');
+  
+  // Toggle sidebar
+  burgerBtn.addEventListener('click', function() {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+    document.body.classList.add('sidebar-open');
+  });
+  
+  // Close sidebar
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('sidebar-open');
+  }
+  
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+  
+  // Close when clicking on links (optional)
+  document.querySelectorAll('.sidebar-item, .sidebar-mainnav .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (!this.classList.contains('sidebar-disabled')) {
+        closeSidebar();
+      } else {
+        e.preventDefault();
+      }
+    });
+  });
+  
+  // Mobil sidebar menyudagi 'Tezkor xizmat' nav-linki bosilganda modal ochish
+  if (window.innerWidth <= 992) {
+    document.querySelectorAll('.sidebar-mainnav .nav-link').forEach(link => {
+      if (link.textContent.trim().includes('Tezkor xizmat')) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Sidebarni yopish
+          document.querySelector('.sidebar-menu').classList.remove('active');
+          document.querySelector('.sidebar-overlay').classList.remove('active');
+          document.body.classList.remove('sidebar-open');
+          // Modalni ochish
+          const serviceModal = document.getElementById('fastServiceModal');
+          if (serviceModal) serviceModal.style.display = 'block';
+        });
+      }
+    });
+  }
+});

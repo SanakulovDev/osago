@@ -104,6 +104,7 @@
   max-width: 280px;
   margin-top: 32px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  /* Katta ekranda default */
 }
 .call-label {
   font-size: 20px;
@@ -139,12 +140,14 @@
 .modal-content {
   background: #F3F5FC;
   border-radius: 10px;
-  padding: 40px 40px 32px 40px;
-  max-width: 400px;
-  min-width: 269px;
+  padding: 24px 12px 18px 12px;
+  max-width: 340px;
+  min-width: 0;
+  width: 95vw;
   box-shadow: 0 2px 16px rgba(0,0,0,0.12);
   margin: auto;
   position: relative;
+  box-sizing: border-box;
 }
 .modal .close {
   position: absolute;
@@ -153,3 +156,51 @@
   font-size: 24px;
   cursor: pointer;
 }
+
+@media (max-width: 700px) {
+  .signin-flex {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    translate: none;
+  }
+  .signin-card {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 10px 18px 10px;
+  }
+  .signin-call {
+    margin-top: 18px;
+    margin-bottom: 0;
+    min-width: 0;
+    max-width: 320px;
+    width: 100%;
+    padding: 16px 10px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .call-label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .call-number {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .modal-content {
+    max-width: 98vw;
+    padding: 16px 4vw 12px 4vw;
+  }
+}
+

@@ -11,25 +11,28 @@
 </head>
 <body>
      <header class="header">
-    <div class="container header-inner">
-     <div class="logo">
-        <a class="logo-link" href="/index.html"><span class="logo-bold">EL </span><span class="logo-green">SUG’URTA</span></a>
-      </div>
-      <nav class="main-nav">
-        <a href="/index.html" class="nav-link">Asosiy sahifa</a>
-        <a href="#" class="nav-link">Biz haqimizda</a>
-        <a href="#" class="nav-link">Hamkorlar</a>
-        <a id="fastServiceModalOpen" href="#" class="nav-link">Tezkor xizmat</a>
-        <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
-      </nav>
-      <div class="header-controls">
-        <div class="lang-select">UZ</div>
-        <div class="user-icon">
-          <img src="/assets/images/user.svg" alt="user image">
-        </div>
+  <div class="container header-inner">
+    <div class="logo" style="display: flex; align-items: center; gap: 12px;">
+      <a class="logo-link" href="/index.html"><span class="logo-bold">EL </span><span class="logo-green">SUG’URTA</span></a>
+      <button class="burger-menu" id="burgerMenuBtn" aria-label="Open menu" style="margin-left:8px;">
+        <img src="/assets/images/menu.png" alt="Menu">
+      </button>
+    </div>
+    <nav class="main-nav">
+      <a href="/index.html" class="nav-link">Asosiy sahifa</a>
+      <a href="#" class="nav-link">Biz haqimizda</a>
+      <a href="#" class="nav-link">Hamkorlar</a>
+      <a id="fastServiceModalOpen" href="#" class="nav-link">Tezkor xizmat</a>
+      <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
+    </nav>
+    <div class="header-controls">
+      <div class="lang-select">UZ</div>
+      <div class="user-icon">
+        <img src="/assets/images/user.svg" alt="user image">
       </div>
     </div>
-  </header>
+  </div>
+</header>
   <div class="menu-bar">
     <div class="container">
       <div class="menu-items">
@@ -39,6 +42,52 @@
         <div class="menu-item">KASKO <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
         <div class="menu-item">Mol-mulk <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
         <div class="menu-item">Sportchilar sug’urtasi<span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar for mobile menu (copied from index.html) -->
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-menu">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">EL SUG'URTA</div>
+      <button class="sidebar-close">&times;</button>
+    </div>
+    <nav class="sidebar-mainnav">
+      <a href="/index.html" class="nav-link">Asosiy sahifa</a>
+      <a href="#" class="nav-link">Biz haqimizda</a>
+      <a href="#" class="nav-link">Hamkorlar</a>
+      <a href="#" class="nav-link">Tezkor xizmat</a>
+      <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
+    </nav>
+    <span class="sidebar-section-title">Sug'urta turlari</span>
+    <div class="sidebar-nav">
+      <a href="/osago.html" class="sidebar-item">OSAGO</a>
+      <a href="#" class="sidebar-item sidebar-disabled">
+        Sayohat sug'urtasi
+        <span class="sidebar-soon">Tez kunda</span>
+      </a>
+      <a href="#" class="sidebar-item sidebar-disabled">
+        Baxtsiz hodisalardan sug'urta
+        <span class="sidebar-soon">Tez kunda</span>
+      </a>
+      <a href="#" class="sidebar-item sidebar-disabled">
+        KASKO
+        <span class="sidebar-soon">Tez kunda</span>
+      </a>
+      <a href="#" class="sidebar-item sidebar-disabled">
+        Mol-Mulk
+        <span class="sidebar-soon">Tez kunda</span>
+      </a>
+      <a href="#" class="sidebar-item sidebar-disabled">
+        Sportchilar sug'urtasi
+        <span class="sidebar-soon">Tez kunda</span>
+      </a>
+    </div>
+    <div class="sidebar-footer">
+      <div class="sidebar-lang">UZ</div>
+      <div class="sidebar-user">
+        <a href="/signin.html"><img src="/assets/images/user.svg" alt="user icon"></a>
       </div>
     </div>
   </div>
