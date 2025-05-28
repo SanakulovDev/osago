@@ -236,6 +236,9 @@
     align-items: center;
     margin-top: 40px;
   }
+  .logo {
+    text-decoration: none;
+  }
   .trust {
     padding: 60px 0;
   }
