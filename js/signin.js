@@ -93,8 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('codeForm').addEventListener('submit', function(e) {
     e.preventDefault();
     // Bu yerda kodni tekshirish yoki keyingi bosqichga o'tish mumkin
-    alert('Kod tasdiqlandi!');
     codeModal.classList.remove('show');
     if (timer) clearInterval(timer);
+    // profile.html ga yo'naltirish
+    window.location.href = '/profile.html';
   });
 });
