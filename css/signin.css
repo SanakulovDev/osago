@@ -60,6 +60,8 @@
   font-family: 'DM Sans', sans-serif;
   flex: 1;
   padding-left: 14px;
+  box-sizing: border-box;
+  min-width: 0;
 }
 .signin-checkbox-row {
   display: flex;
