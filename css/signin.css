@@ -9,22 +9,32 @@
 .signin-title span {
   color: #02C463;
 }
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
 .signin-flex {
   display: flex;
   justify-content: center;
-  align-items: start;
-  gap: 118px;
+  align-items: flex-start;
+  gap: 64px;
+  flex-wrap: wrap;
   margin-top: 48px;
   margin-bottom: 108px;
-  translate: 100px 0;
+  translate: none;
 }
 .signin-card {
   background: #F3F5FC;
   border-radius: 24px;
   padding: 40px 40px 32px 40px;
   max-width: 425px;
-  min-width: 255px;
+  min-width: 280px;
+  width: 100%;
   box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  box-sizing: border-box;
 }
 .signin-card-title {
   font-size: 17px;
@@ -102,11 +112,12 @@
   background: #F3F5FC;
   border-radius: 18px;
   padding: 24px 36px;
-  min-width: 240px;
-  max-width: 280px;
+  min-width: 220px;
+  max-width: 320px;
+  width: 100%;
   margin-top: 32px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  /* Katta ekranda default */
+  box-sizing: border-box;
 }
 .call-label {
   font-size: 20px;
@@ -159,30 +170,32 @@
   cursor: pointer;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1100px) {
+  .signin-flex {
+    gap: 32px;
+  }
+}
+@media (max-width: 900px) {
   .signin-flex {
     flex-direction: column;
     gap: 24px;
     align-items: center;
     margin-top: 32px;
     margin-bottom: 48px;
-    translate: none;
   }
-  .signin-card {
+  .signin-card, .signin-call {
     max-width: 100%;
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
+  }
+  .signin-card {
     padding: 24px 10px 18px 10px;
   }
   .signin-call {
     margin-top: 18px;
     margin-bottom: 0;
-    min-width: 0;
-    max-width: 320px;
-    width: 100%;
     padding: 16px 10px;
-    box-sizing: border-box;
     border-radius: 12px;
     font-size: 15px;
     display: flex;
@@ -199,10 +212,31 @@
     text-align: center;
   }
 }
+@media (max-width: 700px) {
+  .signin-title {
+    font-size: 26px;
+    margin-top: 24px;
+    margin-bottom: 18px;
+  }
+}
 @media (max-width: 500px) {
   .modal-content {
     max-width: 98vw;
     padding: 16px 4vw 12px 4vw;
+  }
+  .signin-title {
+    font-size: 20px;
+  }
+  .signin-card-title {
+    font-size: 15px;
+  }
+  .signin-btn {
+    font-size: 15px;
+    height: 42px;
+  }
+  .signin-phone-code, .signin-phone-input {
+    font-size: 14px;
+    height: 38px;
   }
 }
 
