@@ -47,7 +47,7 @@
 .signin-phone-row {
   display: flex;
   gap: 10px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 .signin-phone-code {
   border: 1.5px solid #02C463;
@@ -65,7 +65,7 @@
   border: 1.5px solid #02C463;
   border-radius: 8px;
   font-size: 16px;
-  height: 48px;
+  /* height: 48px; */
   background: #fff;
   font-family: 'DM Sans', sans-serif;
   flex: 1;
@@ -237,6 +237,7 @@
   .signin-phone-code, .signin-phone-input {
     font-size: 14px;
     height: 38px;
+    box-sizing: border-box;
   }
 }
 
