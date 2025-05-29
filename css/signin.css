@@ -29,7 +29,7 @@
 .signin-card {
   background: #F3F5FC;
   border-radius: 24px;
-  padding: 40px 40px 32px 40px;
+  padding: 35px 35px 35px 35px;
   max-width: 425px;
   min-width: 280px;
   width: 100%;
@@ -111,7 +111,7 @@
 .signin-call {
   background: #F3F5FC;
   border-radius: 18px;
-  padding: 24px 36px;
+  padding: 22px 34px;
   min-width: 220px;
   max-width: 320px;
   width: 100%;
@@ -181,16 +181,16 @@
     gap: 24px;
     align-items: center;
     margin-top: 32px;
-    margin-bottom: 48px;
+    margin-bottom: 28px;
   }
   .signin-card, .signin-call {
-    max-width: 100%;
+    max-width: 90%;
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
   }
   .signin-card {
-    padding: 24px 10px 18px 10px;
+    padding: 34px 20px 34px 20px;
   }
   .signin-call {
     margin-top: 18px;
@@ -212,6 +212,14 @@
     text-align: center;
   }
 }
+@media (max-width: 800px) {
+  .signin-card, .signin-call {
+    max-width: 90%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
 @media (max-width: 700px) {
   .signin-title {
     font-size: 26px;
@@ -220,19 +228,29 @@
   }
 }
 @media (max-width: 500px) {
+  .signin-card, .signin-call {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .signin-card {
+    padding: 34px 20px 34px 20px;
+  }
   .modal-content {
     max-width: 98vw;
     padding: 16px 4vw 12px 4vw;
   }
   .signin-title {
-    font-size: 20px;
+    font-size: 22px;
   }
   .signin-card-title {
-    font-size: 15px;
+    font-size: 17px;
   }
   .signin-btn {
     font-size: 15px;
     height: 42px;
+    margin-top: 5px;
   }
   .signin-phone-code, .signin-phone-input {
     font-size: 14px;
