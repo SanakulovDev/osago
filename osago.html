@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,14 +18,14 @@
       </button>
     </div>
     <nav class="main-nav">
-      <a href="/index.html" class="nav-link">Asosiy sahifa</a>
-      <a href="#" class="nav-link">Biz haqimizda</a>
-      <a href="#" class="nav-link">Hamkorlar</a>
-      <a id="fastServiceModalOpen" href="#" class="nav-link">Tezkor xizmat</a>
-      <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
+      <a href="/index.html" class="nav-link" data-i18n="home">Asosiy sahifa</a>
+      <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
+      <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
+      <a id="fastServiceModalOpen" href="#" class="nav-link" data-i18n="fastService">Tezkor xizmat</a>
+      <a href="tel:+99877404040" class="nav-link" data-i18n="phone">+998 77 404 40 40</a>
     </nav>
     <div class="header-controls">
-      <div class="lang-select">UZ</div>
+      <div class="lang-select"><select id="languageSwitcher"><option value="uz">UZ</option><option value="ru">RU</option></select></div>
       <div class="user-icon">
         <a href="/signin.html"><img src="/assets/images/user.svg" alt="user image"></a>
       </div>
@@ -37,12 +37,12 @@
   <div class="menu-bar">
     <div class="container">
       <div class="menu-items">
-        <div class="menu-item active_navbar">OSAGO</div>
-        <div class="menu-item">Sayohat sug‘urtasi <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item">Baxtsiz hodisalardan sug‘urta <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item">KASKO <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item">Mol-mulk <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item">Sportchilar sug’urtasi<span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item active_navbar" data-i18n="osago">OSAGO</div>
+        <div class="menu-item" data-i18n="travel">Sayohat sug‘urtasi <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item" data-i18n="accident">Baxtsiz hodisalardan sug‘urta <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item" data-i18n="kasko">KASKO <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item" data-i18n="property">Mol-mulk <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item" data-i18n="sport">Sportchilar sug’urtasi<span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
       </div>
     </div>
   </div>
@@ -57,35 +57,20 @@
       <button class="sidebar-close">&times;</button>
     </div>
     <nav class="sidebar-mainnav">
-      <a href="/index.html" class="nav-link">Asosiy sahifa</a>
-      <a href="#" class="nav-link">Biz haqimizda</a>
-      <a href="#" class="nav-link">Hamkorlar</a>
-      <a href="#" class="nav-link">Tezkor xizmat</a>
-      <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
+      <a href="/index.html" class="nav-link" data-i18n="home">Asosiy sahifa</a>
+      <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
+      <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
+      <a href="#" class="nav-link" data-i18n="fastService">Tezkor xizmat</a>
+      <a href="tel:+99877404040" class="nav-link" data-i18n="phone">+998 77 404 40 40</a>
     </nav>
-    <span class="sidebar-section-title">Sug'urta turlari</span>
+    <span class="sidebar-section-title" data-i18n="footerPartners">Sug'urta turlari</span>
     <div class="sidebar-nav">
-      <a href="/osago.html" class="sidebar-item">OSAGO</a>
-      <a href="#" class="sidebar-item sidebar-disabled">
-        Sayohat sug'urtasi
-        <span class="sidebar-soon">Tez kunda</span>
-      </a>
-      <a href="#" class="sidebar-item sidebar-disabled">
-        Baxtsiz hodisalardan sug'urta
-        <span class="sidebar-soon">Tez kunda</span>
-      </a>
-      <a href="#" class="sidebar-item sidebar-disabled">
-        KASKO
-        <span class="sidebar-soon">Tez kunda</span>
-      </a>
-      <a href="#" class="sidebar-item sidebar-disabled">
-        Mol-Mulk
-        <span class="sidebar-soon">Tez kunda</span>
-      </a>
-      <a href="#" class="sidebar-item sidebar-disabled">
-        Sportchilar sug'urtasi
-        <span class="sidebar-soon">Tez kunda</span>
-      </a>
+      <a href="/osago.html" class="sidebar-item" data-i18n="osago">OSAGO</a>
+      <a href="#" class="sidebar-item sidebar-disabled"><span data-i18n="travel">Sayohat sug'urtasi</span><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a>
+      <a href="#" class="sidebar-item sidebar-disabled"><span data-i18n="accident">Baxtsiz hodisalardan sug'urta</span><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a>
+      <a href="#" class="sidebar-item sidebar-disabled"><span data-i18n="kasko">KASKO</span><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a>
+      <a href="#" class="sidebar-item sidebar-disabled"><span data-i18n="property">Mol-Mulk</span><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a>
+      <a href="#" class="sidebar-item sidebar-disabled"><span data-i18n="sport">Sportchilar sug'urtasi</span><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a>
     </div>
     <div class="sidebar-footer">
       <div class="sidebar-lang">UZ</div>
@@ -99,7 +84,7 @@
   <section class="osago-section" style="background:#fff; padding:40px 0 80px; font-family: 'DM Sans', sans-serif;">
     <div class="container">
       <div style="margin-bottom:18px;">
-        <span class="section-title" style="color:#02C463; font-size:32px; font-weight:700; letter-spacing:0; vertical-align:middle;">OSAGO</span>
+        <span class="section-title" style="color:#02C463; font-size:32px; font-weight:700; letter-spacing:0; vertical-align:middle;" data-i18n="osago">OSAGO</span>
         <span style="font-size:32px; font-weight:700; margin-left:8px; vertical-align:middle;">RASMIYLASHTIRISH</span>
       </div>
       <!-- Stepper -->
@@ -113,38 +98,38 @@
       <div class="osago-form-row" style="display:flex; gap:22px; align-items:stretch; flex-wrap:wrap; width:100%;">
         <!-- Ma’lumotlarni kiritish -->
         <div class="osago-form-card" style="background:#F3F5FC; border-radius:16px; padding:24px 22px; flex:1 1 0; min-width:426px; max-width:370px; box-sizing:border-box; box-shadow:0 1px 2px rgba(16,24,40,0.05); border:1.5px solid #E9ECF8;">
-          <h3 style="font-size:20px; font-weight:700; margin-bottom:10px;">Ma’lumotlarni kiriting</h3>
-          <p style="color:#000; font-size:15px; margin-bottom:18px;">Ushbu ma’lumotlar majburiy sug‘urta polisining narxini aniqlash uchun kerak.</p>
+          <h3 style="font-size:20px; font-weight:700; margin-bottom:10px;" data-i18n="osagoFormTitle">Ma’lumotlarni kiriting</h3>
+          <p style="color:#000; font-size:15px; margin-bottom:18px;" data-i18n="osagoFormDesc">Ushbu ma’lumotlar majburiy sug‘urta polisining narxini aniqlash uchun kerak.</p>
           <form id="osago-main-form" autocomplete="off">
-            <input id="car-number" type="text" placeholder="Mashina davlat raqami" style="width:100%; margin-bottom:14px; padding:13px 16px; border:2px solid #02C463; border-radius:10px; font-size:16px; outline:none; background:#fff; box-sizing:border-box;" maxlength="9" required>
+            <input id="car-number" type="text" placeholder="Mashina davlat raqami" style="width:100%; margin-bottom:14px; padding:13px 16px; border:2px solid #02C463; border-radius:10px; font-size:16px; outline:none; background:#fff; box-sizing:border-box;" maxlength="9" required data-i18n-placeholder="carNumberPlaceholder">
             <div style="display:flex; gap:10px;">
-              <input id="tex-seriya" type="text" placeholder="Seriyasi" style="flex:1; min-width:0; padding:13px 16px; border:2px solid #02C463; border-radius:10px; font-size:16px; outline:none; background:#fff; box-sizing:border-box;" maxlength="2" required>
-              <input id="tex-raqam" type="text" placeholder="Raqami" style="flex:2; min-width:0; padding:13px 16px; border:2px solid #02C463; border-radius:10px; font-size:16px; outline:none; background:#fff; box-sizing:border-box;" maxlength="7" required>
+              <input id="tex-seriya" type="text" placeholder="Seriyasi" style="flex:1; min-width:0; padding:13px 16px; border:2px solid #02C463; border-radius:10px; font-size:16px; outline:none; background:#fff; box-sizing:border-box;" maxlength="2" required data-i18n-placeholder="texSeriyaPlaceholder">
+              <input id="tex-raqam" type="text" placeholder="Raqami" style="flex:2; min-width:0; padding:13px 16px; border:2px solid #02C463; border-radius:10px; font-size:16px; outline:none; background:#fff; box-sizing:border-box;" maxlength="7" required data-i18n-placeholder="texRaqamPlaceholder">
             </div>
           </form>
         </div>
         <!-- Pasport ma’lumoti -->
         <div class="osago-form-card" id="passport-card" style="background:#F3F5FC; border-radius:16px; padding:24px 22px; flex:1 1 0; min-width:426px; max-width:370px; box-sizing:border-box; border:1.5px solid #E9ECF8; opacity:1;">
-          <h3 style="font-size:20px; font-weight:700; margin-bottom:10px; color:#000;">Mashina egasi pasport ma’lumoti</h3>
-          <p style="color:#000; font-size:15px; margin-bottom:18px;">Keyingi qadamga o‘tish uchun mashina egasining pasport ma’lumotlarini kiriting</p>
+          <h3 style="font-size:20px; font-weight:700; margin-bottom:10px; color:#000;" data-i18n="passportTitle">Mashina egasi pasport ma’lumoti</h3>
+          <p style="color:#000; font-size:15px; margin-bottom:18px;" data-i18n="passportDesc">Keyingi qadamga o‘tish uchun mashina egasining pasport ma’lumotlarini kiriting</p>
           <form id="passport-form" autocomplete="off">
             <div style="display:flex; gap:10px; margin-bottom:14px;">
-              <input id="passport-seriya" type="text" placeholder="Seriya" style="flex:1; min-width:0; padding:13px 16px; border:2px solid #02C463; border-radius:10px; font-size:16px; background:#fff; color:#222; box-sizing:border-box;" maxlength="2" required>
-              <input id="passport-raqam" type="text" placeholder="Raqami" style="flex:2; min-width:0; padding:13px 16px; border:2px solid #02C463; border-radius:10px; font-size:16px; background:#fff; color:#222; box-sizing:border-box;" maxlength="7" required>
+              <input id="passport-seriya" type="text" placeholder="Seriya" style="flex:1; min-width:0; padding:13px 16px; border:2px solid #02C463; border-radius:10px; font-size:16px; background:#fff; color:#222; box-sizing:border-box;" maxlength="2" required data-i18n-placeholder="passportSeriyaPlaceholder">
+              <input id="passport-raqam" type="text" placeholder="Raqami" style="flex:2; min-width:0; padding:13px 16px; border:2px solid #02C463; border-radius:10px; font-size:16px; background:#fff; color:#222; box-sizing:border-box;" maxlength="7" required data-i18n-placeholder="passportRaqamPlaceholder">
             </div>
-            <button id="passport-next-btn" type="submit" style="width:100%; background:#BDBDBD; color:#fff; border:none; border-radius:10px; padding:13px 0; font-size:17px; font-weight:600; cursor:not-allowed;" disabled>Davom etish</button>
+            <button id="passport-next-btn" type="submit" style="width:100%; background:#BDBDBD; color:#fff; border:none; border-radius:10px; padding:13px 0; font-size:17px; font-weight:600; cursor:not-allowed;" disabled data-i18n="towSubmit">Davom etish</button>
           </form>
         </div>
         <!-- Ma'lumotlar bloki (dastlab yashirin) -->
         <div id="summary-block" style="display:none; background:#F3F5FC; border-radius:16px; padding:18px 18px; flex:1 1 0; min-width:200px; max-width:240px; box-sizing:border-box; box-shadow:0 1px 2px rgba(16,24,40,0.05); border:1.5px solid #E9ECF8;">
-          <div style="font-size:17px; font-weight:700; color:#222; margin-bottom:10px;">Sizning ma'lumotlaringiz</div>
-          <div style="display:flex; justify-content:space-between; font-size:15px; margin-bottom:4px;"><span>Mashina modeli:</span><span id="summary-model">LACETTI</span></div>
-          <div style="display:flex; justify-content:space-between; font-size:15px;"><span>Davlat raqami:</span><span id="summary-number"></span></div>
+          <div style="font-size:17px; font-weight:700; color:#222; margin-bottom:10px;" data-i18n="summaryTitle">Sizning ma'lumotlaringiz</div>
+          <div style="display:flex; justify-content:space-between; font-size:15px; margin-bottom:4px;"><span data-i18n="summaryModel">Mashina modeli:</span><span id="summary-model">LACETTI</span></div>
+          <div style="display:flex; justify-content:space-between; font-size:15px;"><span data-i18n="summaryNumber">Davlat raqami:</span><span id="summary-number"></span></div>
         </div>
         <!-- Qo‘ng‘iroq qilish (dastlab ko‘rinadi) -->
         <div id="call-block" style="background:#F3F5FC; border-radius:16px; padding:24px 22px; flex:1 1 0; min-width:235px; max-width:220px; box-sizing:border-box; box-shadow:0 1px 2px rgba(16,24,40,0.05); border:1.5px solid #E9ECF8; display:flex; flex-direction:column; justify-content:center; align-items:center;">
-          <div style="font-size:18px; font-weight:700; color:#222; margin-bottom:10px;">Qo‘ng‘iroq qiling:</div>
-          <a href="tel:+99877404040" style="color:#02C463; font-size:18px; font-weight:700; text-decoration:none;">+998 77 404 40 40</a>
+          <div style="font-size:18px; font-weight:700; color:#222; margin-bottom:10px;" data-i18n="callTitle">Qo‘ng‘iroq qiling:</div>
+          <a href="tel:+99877404040" style="color:#02C463; font-size:18px; font-weight:700; text-decoration:none;" data-i18n="phone">+998 77 404 40 40</a>
         </div>
       </div>
     </div>
@@ -154,8 +139,8 @@
     <div class="container footer-flex">
       <div class="footer-brand">
         <a class="logo" href="/index.html"><span class="logo-bold">EL </span><span class="logo-green">SUG’URTA</span></a>
-        <p>Sug’urta bo’yicha haqiqiy yordamchingiz</p>
-        <a href="tel:+99877404040" class="footer-phone">+998 77 404 40 40</a>
+        <p data-i18n="footerSlogan">Sug’urta bo’yicha haqiqiy yordamchingiz</p>
+        <a href="tel:+99877404040" class="footer-phone" data-i18n="phone">+998 77 404 40 40</a>
         <div class="social-icons">
             <img src="assets/images/insta.png" alt="Instagram">
             <img src="assets/images/telegram.png" alt="Telegram">
@@ -166,20 +151,20 @@
       </div>
       <div class="footer-links">
         <div class="column">
-          <a href="/index.html">Asosiy sahifa</a>
-          <a href="/osago.html">OSAGO</a>
-          <a href="#">Sayohat</a>
-          <a href="#">Hamkorlik</a>
+          <a href="/index.html" data-i18n="footerHome">Asosiy sahifa</a>
+          <a href="/osago.html" data-i18n="footerOsago">OSAGO</a>
+          <a href="#" data-i18n="footerTravel">Sayohat</a>
+          <a href="#" data-i18n="footerPartners">Hamkorlik</a>
         </div>
         <div class="column">
-          <h4>Mijozlarni Qo‘llab-Quvvatlash</h4>
-          <a href="#">Tez-tez so‘raladigan savollar</a>
-          <a href="#">Maxfiylik siyosati</a>
+          <h4 data-i18n="footerSupport">Mijozlarni Qo‘llab-Quvvatlash</h4>
+          <a href="#" data-i18n="footerFaq">Tez-tez so‘raladigan savollar</a>
+          <a href="#" data-i18n="footerPrivacy">Maxfiylik siyosati</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© “elsu.uz”, 2025 Barcha huquqlar himoyalangan.</p>
+      <p data-i18n="footerCopyright">© “elsu.uz”, 2025 Barcha huquqlar himoyalangan.</p>
     </div>
   </footer>
   <!-- Fast Service Modal (index.html dagidek) -->
@@ -187,36 +172,27 @@
     <div class="fast-modal-content">
       <div class="fast-service-grid">
         <div class="fast-service-card">
-          <div class="fast-service-title">Yevroprotokol</div>
-          <div class="fast-service-desc">Yevroprotokol to'ldirish namunasi</div>
-          <button class="fast-service-btn">Foydalanish</button>
-          <div class="soon-badge" style="display:none;">
-            Tez kunda
-            <span class="soon-arrow"></span>
-          </div>
+          <div class="fast-service-title" data-i18n="euro">Yevroprotokol</div>
+          <div class="fast-service-desc" data-i18n="euroDesc">Yevroprotokol to'ldirish namunasi</div>
+          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
+          <div class="soon-badge" style="display:none;" data-i18n="soon">Tez kunda<span class="soon-arrow"></span></div>
         </div>
         <div class="fast-service-card">
-          <div class="fast-service-title">Evakuator chaqirish</div>
-          <div class="fast-service-desc">Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor yordam chaqirish xizmati.</div>
-          <button class="fast-service-btn" id="towtruckBtn">Foydalanish</button>
+          <div class="fast-service-title" data-i18n="tow">Evakuator chaqirish</div>
+          <div class="fast-service-desc" data-i18n="towDesc">Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor yordam chaqirish xizmati.</div>
+          <button class="fast-service-btn" id="towtruckBtn" data-i18n="use">Foydalanish</button>
         </div>
         <div class="fast-service-card">
-          <div class="fast-service-title">Benzin</div>
-          <div class="fast-service-desc">Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent shahri va atrofi bo‘yicha)</div>
-          <button class="fast-service-btn">Foydalanish</button>
-          <div class="soon-badge" style="display:none;">
-            Tez kunda
-            <span class="soon-arrow"></span>
-          </div>
+          <div class="fast-service-title" data-i18n="fuel">Benzin</div>
+          <div class="fast-service-desc" data-i18n="fuelDesc">Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent shahri va atrofi bo‘yicha)</div>
+          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
+          <div class="soon-badge" style="display:none;" data-i18n="soon">Tez kunda<span class="soon-arrow"></span></div>
         </div>
         <div class="fast-service-card">
-          <div class="fast-service-title">Baholash</div>
-          <div class="fast-service-desc">Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va baholovchi bilan bog‘laning</div>
-          <button class="fast-service-btn">Foydalanish</button>
-          <div class="soon-badge" style="display:none;">
-            Tez kunda
-            <span class="soon-arrow"></span>
-          </div>
+          <div class="fast-service-title" data-i18n="eval">Baholash</div>
+          <div class="fast-service-desc" data-i18n="evalDesc">Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va baholovchi bilan bog‘laning</div>
+          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
+          <div class="soon-badge" style="display:none;" data-i18n="soon">Tez kunda<span class="soon-arrow"></span></div>
         </div>
       </div>
       <button id="fastServiceModalClose"><img src="/assets/images/close.svg" alt="Close"></button>
@@ -228,18 +204,19 @@
       <button id="towtruckModalClose" class="towtruck-modal-close">
         <img src="/assets/images/close.svg" alt="Close">
       </button>
-      <h2>Evakuator chaqirish</h2>
-      <p>Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon raqamingizni kiriting.</p>
+      <h2 data-i18n="towTitle">Evakuator chaqirish</h2>
+      <p data-i18n="towDescModal">Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon raqamingizni kiriting.</p>
       <form class="towtruck-form">
-        <input type="text" placeholder="Ism familiya" class="towtruck-input"/>
+        <input type="text" placeholder="Ism familiya" class="towtruck-input" data-i18n-placeholder="towName"/>
         <div class="towtruck-phone-row">
           <span class="towtruck-phone-prefix">+998</span>
-          <input type="tel" placeholder="Telefon raqam" class="towtruck-input-phone" maxlength="9" />
+          <input type="tel" placeholder="Telefon raqam" class="towtruck-input-phone" maxlength="9" data-i18n-placeholder="towPhone"/>
         </div>
-        <button type="submit" class="towtruck-submit" disabled>Davom etish</button>
+        <button type="submit" class="towtruck-submit" disabled data-i18n="towSubmit">Davom etish</button>
       </form>
     </div>
   </div>
+  <script src="js/lang.js"></script>
   <script src="js/script.js"></script> 
   <script src="js/osago.js"></script>
 </body>

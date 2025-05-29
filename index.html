@@ -15,14 +15,19 @@
         <a class="logo-link" href="/index.html"><span class="logo-bold">EL </span><span class="logo-green">SUG’URTA</span></a>
       </div>
       <nav class="main-nav">
-        <a href="#" class="nav-link active">Asosiy sahifa</a>
-        <a href="#" class="nav-link">Biz haqimizda</a>
-        <a href="#" class="nav-link">Hamkorlar</a>
-        <a id="fastServiceModalOpen" href="#" class="nav-link">Tezkor xizmat</a>
-        <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
+        <a href="#" class="nav-link active" data-i18n="home">Asosiy sahifa</a>
+        <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
+        <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
+        <a id="fastServiceModalOpen" href="#" class="nav-link" data-i18n="fastService">Tezkor xizmat</a>
+        <a href="tel:+99877404040" class="nav-link" data-i18n="phone">+998 77 404 40 40</a>
       </nav>
       <div class="header-controls">
-        <div class="lang-select">UZ</div>
+        <div class="lang-select">
+          <select name="" id="languageSwitcher">
+            <option value="uz">UZ</option>
+            <option value="ru">RU</option>
+          </select>
+        </div>
         <div class="user-icon">
          <a href="/signin.html"><img src="/assets/images/user.svg" alt="user image"></a>
         </div>
@@ -35,38 +40,38 @@
 
   <div class="menu-bar">
     <div class="container menu-items">
-      <a href="/osago.html" class="menu-item">OSAGO</a>
-      <div class="menu-item">
+      <a href="/osago.html" class="menu-item" data-i18n="osago">OSAGO</a>
+      <div class="menu-item" data-i18n="travel">
         Sayohat sug’urtasi
-        <div class="menu-soon-badge" style="display:none;">
+        <div class="menu-soon-badge" style="display:none;" data-i18n="soon">
           Tez kunda
           <span class="menu-soon-arrow"></span>
         </div>
       </div>
-      <div class="menu-item">
+      <div class="menu-item" data-i18n="accident">
         Baxtsiz hodisalardan sug’urta
-        <div class="menu-soon-badge" style="display:none;">
+        <div class="menu-soon-badge" style="display:none;" data-i18n="soon">
           Tez kunda
           <span class="menu-soon-arrow"></span>
         </div>
       </div>
-      <div class="menu-item">
+      <div class="menu-item" data-i18n="kasko">
         KASKO
-        <div class="menu-soon-badge" style="display:none;">
+        <div class="menu-soon-badge" style="display:none;" data-i18n="soon">
           Tez kunda
           <span class="menu-soon-arrow"></span>
         </div>
       </div>
-      <div class="menu-item">
+      <div class="menu-item" data-i18n="property">
         Mol-Mulk
-        <div class="menu-soon-badge" style="display:none;">
+        <div class="menu-soon-badge" style="display:none;" data-i18n="soon">
           Tez kunda
           <span class="menu-soon-arrow"></span>
         </div>
       </div>
-      <div class="menu-item">
+      <div class="menu-item" data-i18n="sport">
         Sportchilar sug’urtasi
-        <div class="menu-soon-badge" style="display:none;">
+        <div class="menu-soon-badge" style="display:none;" data-i18n="soon">
           Tez kunda
           <span class="menu-soon-arrow"></span>
         </div>
@@ -86,36 +91,36 @@
   </div>
   
   <nav class="sidebar-mainnav">
-    <a href="#" class="nav-link active">Asosiy sahifa</a>
-    <a href="#" class="nav-link">Biz haqimizda</a>
-    <a href="#" class="nav-link">Hamkorlar</a>
-    <a href="#" class="nav-link">Tezkor xizmat</a>
-    <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
+    <a href="#" class="nav-link active" data-i18n="home">Asosiy sahifa</a>
+    <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
+    <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
+    <a href="#" class="nav-link" data-i18n="fastService">Tezkor xizmat</a>
+    <a href="tel:+99877404040" class="nav-link" data-i18n="phone">+998 77 404 40 40</a>
   </nav>
   
-  <span class="sidebar-section-title">Sug'urta turlari</span>
+  <span class="sidebar-section-title" data-i18n="footerPartners">Sug'urta turlari</span>
   
   <div class="sidebar-nav">
-    <a href="/osago.html" class="sidebar-item">OSAGO</a>
+    <a href="/osago.html" class="sidebar-item" data-i18n="osago">OSAGO</a>
     <a href="#" class="sidebar-item sidebar-disabled">
-      Sayohat sug'urtasi
-      <span class="sidebar-soon">Tez kunda</span>
+      <span data-i18n="travel">Sayohat sug'urtasi</span>
+      <span class="sidebar-soon" data-i18n="soon">Tez kunda</span>
     </a>
     <a href="#" class="sidebar-item sidebar-disabled">
-      Baxtsiz hodisalardan sug'urta
-      <span class="sidebar-soon">Tez kunda</span>
+      <span data-i18n="accident">Baxtsiz hodisalardan sug'urta</span>
+      <span class="sidebar-soon" data-i18n="soon">Tez kunda</span>
     </a>
     <a href="#" class="sidebar-item sidebar-disabled">
-      KASKO
-      <span class="sidebar-soon">Tez kunda</span>
+      <span data-i18n="kasko">KASKO</span>
+      <span class="sidebar-soon" data-i18n="soon">Tez kunda</span>
     </a>
     <a href="#" class="sidebar-item sidebar-disabled">
-      Mol-Mulk
-      <span class="sidebar-soon">Tez kunda</span>
+      <span data-i18n="property">Mol-Mulk</span>
+      <span class="sidebar-soon" data-i18n="soon">Tez kunda</span>
     </a>
     <a href="#" class="sidebar-item sidebar-disabled">
-      Sportchilar sug'urtasi
-      <span class="sidebar-soon">Tez kunda</span>
+      <span data-i18n="sport">Sportchilar sug'urtasi</span>
+      <span class="sidebar-soon" data-i18n="soon">Tez kunda</span>
     </a>
     <div class="sidebar-footer">
       <div class="sidebar-lang">UZ</div>
@@ -129,9 +134,9 @@
   <section class="hero">
     <div class="container hero-flex">
       <div class="text">
-        <h1><span class="green">Sug’urta bo’yicha</span> yagona sotuv bilan cheklanmagan <span class="green">marketplace</span></h1>
-        <p>“Biz sug’urta sotuvi bilan cheklanmaymiz”</p>
-        <a href="#" class="btn">Kirish</a>
+        <h1><span class="green" data-i18n="heroTitle">Sug’urta bo’yicha yagona sotuv bilan cheklanmagan marketplace</span></h1>
+        <p data-i18n="heroDesc">“Biz sug’urta sotuvi bilan cheklanmaymiz”</p>
+        <a href="#" class="btn" data-i18n="heroBtn">Kirish</a>
       </div>
       <div class="image">
         <img src="assets/images/hero.png" alt="hero">
@@ -149,17 +154,17 @@
         </div>
       </div>
       <div class="about-text">
-        <span class="section-title">Biz haqimizda</span>
-        <h2><span class="green">Innovatsion</span> Sug'urta Yechimlari</h2>
-        <p>Haqiqiy sug’urtaning ishlashini hohlab ushbu sayt ishga tushirildi va bu sayt orqali faqatgina ishonchli sug’urta kompaniyalarning sug’urta mahsulotlari sotuvi amalga oshiriladi.</p>
-        <a href="#" class="btn">Batafsil</a>
+        <span class="section-title" data-i18n="aboutTitle">Biz haqimizda</span>
+        <h2><span class="green" data-i18n="aboutSubtitle">Innovatsion Sug'urta Yechimlari</span></h2>
+        <p data-i18n="aboutDesc">Haqiqiy sug’urtaning ishlashini hohlab ushbu sayt ishga tushirildi va bu sayt orqali faqatgina ishonchli sug’urta kompaniyalarning sug’urta mahsulotlari sotuvi amalga oshiriladi.</p>
+        <a href="#" class="btn" data-i18n="aboutBtn">Batafsil</a>
       </div>
     </div>
   </section>
 
   <section class="partners">
     <div class="container">
-      <h2 class="section-title green">Hamkorlarimiz</h2>
+      <h2 class="section-title green" data-i18n="partnersTitle">Hamkorlarimiz</h2>
       <div class="partner-logos">
         <img src="assets/images/logo1.png" alt="logo">
         <img src="assets/images/logo2.png" alt="logo">
@@ -173,36 +178,36 @@
   <section class="trust">
     <div class="container">
       <h2 class="trust-heading">
-        <span class="trust-green">Nega bizga</span> ishonishingiz mumkin?
+        <span class="trust-green" data-i18n="trustWhy">Nega bizga ishonishingiz mumkin?</span>
       </h2>
       <br>
       <div class="trust-cards">
         <div class="card">
           <div class="number">1</div>
           <div class="card-inner">
-            <h3 class="card-title">Amaliy yordam</h3>
-            <p class="card-desc">Taklif etilayotgan sug'urta xizmatlari va taklif etayotgan sug'urta kompaniyalar bilan muammo yuzaga kelsa amaliy yordam kafolatlanadi</p>
+            <h3 class="card-title" data-i18n="trust1">Amaliy yordam</h3>
+            <p class="card-desc" data-i18n="trust1desc">Taklif etilayotgan sug'urta xizmatlari va taklif etayotgan sug'urta kompaniyalar bilan muammo yuzaga kelsa amaliy yordam kafolatlanadi</p>
           </div>
         </div>
         <div class="card">
           <div class="number">2</div>
           <div class="card-inner">
-            <h3 class="card-title">Saralangan kompaniyalar</h3>
-            <p class="card-desc">Tajribali sug'urtachi Hasan Xolbo’tayev nazorati ostida sug’urta kompaniyalar saralanadi</p>
+            <h3 class="card-title" data-i18n="trust2">Saralangan kompaniyalar</h3>
+            <p class="card-desc" data-i18n="trust2desc">Tajribali sug'urtachi Hasan Xolbo’tayev nazorati ostida sug’urta kompaniyalar saralanadi</p>
           </div>
         </div>
         <div class="card">
           <div class="number">3</div>
           <div class="card-inner">
-            <h3 class="card-title">Bepul konsultatsiya</h3>
-            <p class="card-desc">Sug'urta sotib olgan mijozlar uchun zarur holatda bir martalik bepul konsultatsiya beriladi</p>
+            <h3 class="card-title" data-i18n="trust3">Bepul konsultatsiya</h3>
+            <p class="card-desc" data-i18n="trust3desc">Sug'urta sotib olgan mijozlar uchun zarur holatda bir martalik bepul konsultatsiya beriladi</p>
           </div>
         </div>
         <div class="card">
           <div class="number">4</div>
           <div class="card-inner">
-            <h3 class="card-title">Xizmat ko'rsatish hududi</h3>
-            <p class="card-desc">Butun O'zbekiston</p>
+            <h3 class="card-title" data-i18n="trust4">Xizmat ko'rsatish hududi</h3>
+            <p class="card-desc" data-i18n="trust4desc">Butun O'zbekiston</p>
           </div>
         </div>
       </div>
@@ -214,8 +219,8 @@
     <div class="container footer-flex">
       <div class="footer-brand">
         <div class="logo" style="cursor: default;"><span class="logo-bold">EL </span><span class="logo-green">SUG’URTA</span></div>
-        <p>Sug’urta bo’yicha haqiqiy yordamchingiz</p>
-        <a href="tel:+99877404040" class="footer-phone">+998 77 404 40 40</a>
+        <p data-i18n="footerSlogan">Sug’urta bo’yicha haqiqiy yordamchingiz</p>
+        <a href="tel:+99877404040" class="footer-phone" data-i18n="phone">+998 77 404 40 40</a>
         <div class="social-icons">
             <img src="assets/images/insta.png" alt="Instagram">
             <img src="assets/images/telegram.png" alt="Telegram">
@@ -226,20 +231,20 @@
       </div>
       <div class="footer-links">
         <div class="column">
-          <h4>Asosiy sahifa</h4>
-          <a href="/osago.html">OSAGO</a>
-          <a href="#">Sayohat</a>
-          <a href="#">Hamkorlik</a>
+          <h4 data-i18n="footerHome">Asosiy sahifa</h4>
+          <a href="/osago.html" data-i18n="footerOsago">OSAGO</a>
+          <a href="#" data-i18n="footerTravel">Sayohat</a>
+          <a href="#" data-i18n="footerPartners">Hamkorlik</a>
         </div>
         <div class="column">
-          <h4>Mijozlarni Qo‘llab-Quvvatlash</h4>
-          <a href="#">Tez-tez so‘raladigan savollar</a>
-          <a href="#">Maxfiylik siyosati</a>
+          <h4 data-i18n="footerSupport">Mijozlarni Qo‘llab-Quvvatlash</h4>
+          <a href="#" data-i18n="footerFaq">Tez-tez so‘raladigan savollar</a>
+          <a href="#" data-i18n="footerPrivacy">Maxfiylik siyosati</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© “elsu.uz”, 2025 Barcha huquqlar himoyalangan.</p>
+      <p data-i18n="footerCopyright">© “elsu.uz”, 2025 Barcha huquqlar himoyalangan.</p>
     </div>
   </footer>
 
@@ -247,33 +252,33 @@
     <div class="fast-modal-content">
       <div class="fast-service-grid">
         <div class="fast-service-card">
-          <div class="fast-service-title">Yevroprotokol</div>
-          <div class="fast-service-desc">Yevroprotokol to'ldirish namunasi</div>
-          <button class="fast-service-btn">Foydalanish</button>
-          <div class="soon-badge" style="display:none;">
+          <div class="fast-service-title" data-i18n="euro">Yevroprotokol</div>
+          <div class="fast-service-desc" data-i18n="euroDesc">Yevroprotokol to'ldirish namunasi</div>
+          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
+          <div class="soon-badge" style="display:none;" data-i18n="soon">
             Tez kunda
             <span class="soon-arrow"></span>
           </div>
         </div>
         <div class="fast-service-card">
-          <div class="fast-service-title">Evakuator chaqirish</div>
-          <div class="fast-service-desc">Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor yordam chaqirish xizmati.</div>
-          <button class="fast-service-btn" id="towtruckBtn">Foydalanish</button>
+          <div class="fast-service-title" data-i18n="tow">Evakuator chaqirish</div>
+          <div class="fast-service-desc" data-i18n="towDesc">Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor yordam chaqirish xizmati.</div>
+          <button class="fast-service-btn" id="towtruckBtn" data-i18n="use">Foydalanish</button>
         </div>
         <div class="fast-service-card">
-          <div class="fast-service-title">Benzin</div>
-          <div class="fast-service-desc">Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent shahri va atrofi bo‘yicha)</div>
-          <button class="fast-service-btn">Foydalanish</button>
-          <div class="soon-badge" style="display:none;">
+          <div class="fast-service-title" data-i18n="fuel">Benzin</div>
+          <div class="fast-service-desc" data-i18n="fuelDesc">Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent shahri va atrofi bo‘yicha)</div>
+          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
+          <div class="soon-badge" style="display:none;" data-i18n="soon">
             Tez kunda
             <span class="soon-arrow"></span>
           </div>
         </div>
         <div class="fast-service-card">
-          <div class="fast-service-title">Baholash</div>
-          <div class="fast-service-desc">Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va baholovchi bilan bog‘laning</div>
-          <button class="fast-service-btn">Foydalanish</button>
-          <div class="soon-badge" style="display:none;">
+          <div class="fast-service-title" data-i18n="eval">Baholash</div>
+          <div class="fast-service-desc" data-i18n="evalDesc">Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va baholovchi bilan bog‘laning</div>
+          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
+          <div class="soon-badge" style="display:none;" data-i18n="soon">
             Tez kunda
             <span class="soon-arrow"></span>
           </div>
@@ -289,18 +294,19 @@
       <button id="towtruckModalClose" class="towtruck-modal-close">
         <img src="/assets/images/close.svg" alt="Close">
       </button>
-      <h2>Evakuator chaqirish</h2>
-      <p>Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon raqamingizni kiriting.</p>
+      <h2 data-i18n="towTitle">Evakuator chaqirish</h2>
+      <p data-i18n="towDescModal">Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon raqamingizni kiriting.</p>
       <form class="towtruck-form">
-        <input type="text" placeholder="Ism familiya" class="towtruck-input"/>
+        <input type="text" placeholder="Ism familiya" class="towtruck-input" data-i18n-placeholder="towName"/>
         <div class="towtruck-phone-row">
           <span class="towtruck-phone-prefix">+998</span>
-          <input type="tel" placeholder="Telefon raqam" class="towtruck-input-phone" maxlength="9" />
+          <input type="tel" placeholder="Telefon raqam" class="towtruck-input-phone" maxlength="9" data-i18n-placeholder="towPhone"/>
         </div>
-        <button type="submit" class="towtruck-submit" disabled>Davom etish</button>
+        <button type="submit" class="towtruck-submit" disabled data-i18n="towSubmit">Davom etish</button>
       </form>
     </div>
   </div>
+  <script src="/js/lang.js"></script>
   <script src="/js/script.js"></script>
 </body>
 </html>

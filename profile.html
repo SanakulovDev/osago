@@ -19,14 +19,14 @@
       </button>
     </div>
     <nav class="main-nav">
-      <a href="/index.html" class="nav-link">Asosiy sahifa</a>
-      <a href="#" class="nav-link">Biz haqimizda</a>
-      <a href="#" class="nav-link">Hamkorlar</a>
-      <a id="fastServiceModalOpen" href="#" class="nav-link">Tezkor xizmat</a>
-      <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
+      <a href="/index.html" class="nav-link" data-i18n="home">Asosiy sahifa</a>
+      <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
+      <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
+      <a id="fastServiceModalOpen" href="#" class="nav-link" data-i18n="fastService">Tezkor xizmat</a>
+      <a href="tel:+99877404040" class="nav-link" data-i18n="phone">+998 77 404 40 40</a>
     </nav>
     <div class="header-controls">
-      <div class="lang-select">UZ</div>
+      <div class="lang-select"><select id="languageSwitcher"><option value="uz">UZ</option><option value="ru">RU</option></select></div>
       <div class="user-icon">
         <img src="/assets/images/user.svg" alt="user image">
       </div>
@@ -36,12 +36,12 @@
   <div class="menu-bar">
     <div class="container">
       <div class="menu-items">
-        <div class="menu-item"><a href="/osago.html" class="menu-item">OSAGO</a></div>
-        <div class="menu-item">Sayohat sug‘urtasi <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item">Baxtsiz hodisalardan sug‘urta <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item">KASKO <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item">Mol-mulk <span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item">Sportchilar sug’urtasi<span class="menu-soon-badge" style="display:none;">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item"><a href="/osago.html" class="menu-item" data-i18n="osago">OSAGO</a></div>
+        <div class="menu-item" data-i18n="travel">Sayohat sug‘urtasi <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item" data-i18n="accident">Baxtsiz hodisalardan sug‘urta <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item" data-i18n="kasko">KASKO <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item" data-i18n="property">Mol-mulk <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
+        <div class="menu-item" data-i18n="sport">Sportchilar sug’urtasi<span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
       </div>
     </div>
   </div>
@@ -56,34 +56,34 @@
       <button class="sidebar-close">&times;</button>
     </div>
     <nav class="sidebar-mainnav">
-      <a href="/index.html" class="nav-link">Asosiy sahifa</a>
-      <a href="#" class="nav-link">Biz haqimizda</a>
-      <a href="#" class="nav-link">Hamkorlar</a>
-      <a href="#" class="nav-link">Tezkor xizmat</a>
-      <a href="tel:+99877404040" class="nav-link">+998 77 404 40 40</a>
+      <a href="/index.html" class="nav-link" data-i18n="home">Asosiy sahifa</a>
+      <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
+      <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
+      <a href="#" class="nav-link" data-i18n="fastService">Tezkor xizmat</a>
+      <a href="tel:+99877404040" class="nav-link" data-i18n="phone">+998 77 404 40 40</a>
     </nav>
-    <span class="sidebar-section-title">Sug'urta turlari</span>
+    <span class="sidebar-section-title" data-i18n="sidebarTypes">Sug'urta turlari</span>
     <div class="sidebar-nav">
-      <a href="/osago.html" class="sidebar-item">OSAGO</a>
+      <a href="/osago.html" class="sidebar-item" data-i18n="osago">OSAGO</a>
       <a href="#" class="sidebar-item sidebar-disabled">
-        Sayohat sug'urtasi
-        <span class="sidebar-soon">Tez kunda</span>
+        <span data-i18n="travel">Sayohat sug'urtasi</span>
+        <span class="sidebar-soon" data-i18n="soon">Tez kunda</span>
       </a>
       <a href="#" class="sidebar-item sidebar-disabled">
-        Baxtsiz hodisalardan sug'urta
-        <span class="sidebar-soon">Tez kunda</span>
+        <span data-i18n="accident">Baxtsiz hodisalardan sug'urta</span>
+        <span class="sidebar-soon" data-i18n="soon">Tez kunda</span>
       </a>
       <a href="#" class="sidebar-item sidebar-disabled">
-        KASKO
-        <span class="sidebar-soon">Tez kunda</span>
+        <span data-i18n="kasko">KASKO</span>
+        <span class="sidebar-soon" data-i18n="soon">Tez kunda</span>
       </a>
       <a href="#" class="sidebar-item sidebar-disabled">
-        Mol-Mulk
-        <span class="sidebar-soon">Tez kunda</span>
+        <span data-i18n="property">Mol-Mulk</span>
+        <span class="sidebar-soon" data-i18n="soon">Tez kunda</span>
       </a>
       <a href="#" class="sidebar-item sidebar-disabled">
-        Sportchilar sug'urtasi
-        <span class="sidebar-soon">Tez kunda</span>
+        <span data-i18n="sport">Sportchilar sug'urtasi</span>
+        <span class="sidebar-soon" data-i18n="soon">Tez kunda</span>
       </a>
     </div>
     <div class="sidebar-footer">
@@ -96,14 +96,14 @@
 
   <div class="profile-page container">
     <div class="profile-sidebar">
-      <button class="profile-menu active">Ma'lumotlarim</button>
-      <button class="profile-menu">Sug'urtalarim</button>
-      <button class="logout-btn">Tizimdan chiqish <span><img class="logout-icon" src="/assets/images/exit.png" alt="exit"></span></button>
+      <button class="profile-menu active" data-i18n="profileMyData">Ma'lumotlarim</button>
+      <button class="profile-menu" data-i18n="profileMyInsurances">Sug'urtalarim</button>
+      <button class="logout-btn" data-i18n="logout">Tizimdan chiqish <span><img class="logout-icon" src="/assets/images/exit.png" alt="exit"></span></button>
     </div>
     <div class="profile-main">
       <div class="profile-info-header">
-        <span class="profile-info-title">Ma’lumotlarim</span>
-        <button class="profile-edit-btn"><img src="/assets/images/edit.png" alt="Edit"></button>
+        <span class="profile-info-title" data-i18n="profileMyData">Ma’lumotlarim</span>
+        <button class="profile-edit-btn" title="Edit"><img src="/assets/images/edit.png" alt="Edit"></button>
       </div>
       <div class="profile-info-content">
         <div class="profile-avatar">
@@ -113,19 +113,19 @@
               <img src="/assets/images/camera.png" alt="Camera">
             </label>
           </div>
-          <div class="profile-avatar-id">ID: 451 458 867</div>
+          <div class="profile-avatar-id" data-i18n="profileId">ID: 451 458 867</div>
         </div>
         <div class="profile-details">
-          <div><span class="profile-label">Ism Familiya</span><span class="profile-value">Sitrizaev To'liqın</span></div>
-          <div><span class="profile-label">Tug‘ilgan sana</span><span class="profile-value">00/00/0000</span></div>
-          <div><span class="profile-label">Telefon raqam</span><span class="profile-value">+998 77 404 40 40</span></div>
-          <div><span class="profile-label">Jins</span><span class="profile-value">Erkak</span></div>
+          <div><span class="profile-label" data-i18n="profileName">Ism Familiya</span><span class="profile-value">Sitrizaev To'liqın</span></div>
+          <div><span class="profile-label" data-i18n="profileBirth">Tug‘ilgan sana</span><span class="profile-value">00/00/0000</span></div>
+          <div><span class="profile-label" data-i18n="profilePhone">Telefon raqam</span><span class="profile-value">+998 77 404 40 40</span></div>
+          <div><span class="profile-label" data-i18n="profileGender">Jins</span><span class="profile-value" data-i18n="profileMale">Erkak</span></div>
         </div>
       </div>
     </div>
     <div class="profile-contact">
-      <div class="profile-contact-title">Qo‘ng‘iroq qiling:</div>
-      <a href="tel:+9987740404040" class="profile-contact-phone">+998 77 404 40 40</a>
+      <div class="profile-contact-title" data-i18n="callTitle">Qo‘ng‘iroq qiling:</div>
+      <a href="tel:+9987740404040" class="profile-contact-phone" data-i18n="phone">+998 77 404 40 40</a>
     </div>
   </div>
 
@@ -133,8 +133,8 @@
     <div class="container footer-flex">
       <div class="footer-brand">
         <a class="logo" href="/index.html"><span class="logo-bold">EL </span><span class="logo-green">SUG’URTA</span></a>
-        <p>Sug’urta bo’yicha haqiqiy yordamchingiz</p>
-        <a href="tel:+99877404040" class="footer-phone">+998 77 404 40 40</a>
+        <p data-i18n="footerSlogan">Sug’urta bo’yicha haqiqiy yordamchingiz</p>
+        <a href="tel:+99877404040" class="footer-phone" data-i18n="phone">+998 77 404 40 40</a>
         <div class="social-icons">
             <img src="assets/images/insta.png" alt="Instagram">
             <img src="assets/images/telegram.png" alt="Telegram">
@@ -145,20 +145,20 @@
       </div>
       <div class="footer-links">
         <div class="column">
-          <a href="/index.html">Asosiy sahifa</a>
-          <a href="/osago.html">OSAGO</a>
-          <a href="#">Sayohat</a>
-          <a href="#">Hamkorlik</a>
+          <a href="/index.html" data-i18n="footerHome">Asosiy sahifa</a>
+          <a href="/osago.html" data-i18n="footerOsago">OSAGO</a>
+          <a href="#" data-i18n="footerTravel">Sayohat</a>
+          <a href="#" data-i18n="footerPartners">Hamkorlik</a>
         </div>
         <div class="column">
-          <h4>Mijozlarni Qo‘llab-Quvvatlash</h4>
-          <a href="#">Tez-tez so‘raladigan savollar</a>
-          <a href="#">Maxfiylik siyosati</a>
+          <h4 data-i18n="footerSupport">Mijozlarni Qo‘llab-Quvvatlash</h4>
+          <a href="#" data-i18n="footerFaq">Tez-tez so‘raladigan savollar</a>
+          <a href="#" data-i18n="footerPrivacy">Maxfiylik siyosati</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© “elsu.uz”, 2025 Barcha huquqlar himoyalangan.</p>
+      <p data-i18n="footerCopyright">© “elsu.uz”, 2025 Barcha huquqlar himoyalangan.</p>
     </div>
   </footer>
 
@@ -166,33 +166,33 @@
     <div class="fast-modal-content">
       <div class="fast-service-grid">
         <div class="fast-service-card">
-          <div class="fast-service-title">Yevroprotokol</div>
-          <div class="fast-service-desc">Yevroprotokol to'ldirish namunasi</div>
-          <button class="fast-service-btn">Foydalanish</button>
-          <div class="soon-badge" style="display:none;">
+          <div class="fast-service-title" data-i18n="euro">Yevroprotokol</div>
+          <div class="fast-service-desc" data-i18n="euroDesc">Yevroprotokol to'ldirish namunasi</div>
+          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
+          <div class="soon-badge" style="display:none;" data-i18n="soon">
             Tez kunda
             <span class="soon-arrow"></span>
           </div>
         </div>
         <div class="fast-service-card">
-          <div class="fast-service-title">Evakuator chaqirish</div>
-          <div class="fast-service-desc">Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor yordam chaqirish xizmati.</div>
-          <button class="fast-service-btn" id="towtruckBtn">Foydalanish</button>
+          <div class="fast-service-title" data-i18n="tow">Evakuator chaqirish</div>
+          <div class="fast-service-desc" data-i18n="towDesc">Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor yordam chaqirish xizmati.</div>
+          <button class="fast-service-btn" id="towtruckBtn" data-i18n="use">Foydalanish</button>
         </div>
         <div class="fast-service-card">
-          <div class="fast-service-title">Benzin</div>
-          <div class="fast-service-desc">Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent shahri va atrofi bo‘yicha)</div>
-          <button class="fast-service-btn">Foydalanish</button>
-          <div class="soon-badge" style="display:none;">
+          <div class="fast-service-title" data-i18n="fuel">Benzin</div>
+          <div class="fast-service-desc" data-i18n="fuelDesc">Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent shahri va atrofi bo‘yicha)</div>
+          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
+          <div class="soon-badge" style="display:none;" data-i18n="soon">
             Tez kunda
             <span class="soon-arrow"></span>
           </div>
         </div>
         <div class="fast-service-card">
-          <div class="fast-service-title">Baholash</div>
-          <div class="fast-service-desc">Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va baholovchi bilan bog‘laning</div>
-          <button class="fast-service-btn">Foydalanish</button>
-          <div class="soon-badge" style="display:none;">
+          <div class="fast-service-title" data-i18n="eval">Baholash</div>
+          <div class="fast-service-desc" data-i18n="evalDesc">Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va baholovchi bilan bog‘laning</div>
+          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
+          <div class="soon-badge" style="display:none;" data-i18n="soon">
             Tez kunda
             <span class="soon-arrow"></span>
           </div>
@@ -207,15 +207,15 @@
       <button id="towtruckModalClose" class="towtruck-modal-close">
         <img src="/assets/images/close.svg" alt="Close">
       </button>
-      <h2>Evakuator chaqirish</h2>
-      <p>Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon raqamingizni kiriting.</p>
+      <h2 data-i18n="towTitle">Evakuator chaqirish</h2>
+      <p data-i18n="towDescModal">Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon raqamingizni kiriting.</p>
       <form class="towtruck-form">
-        <input type="text" placeholder="Ism familiya" class="towtruck-input"/>
+        <input type="text" placeholder="Ism familiya" class="towtruck-input" data-i18n-placeholder="towName"/>
         <div class="towtruck-phone-row">
           <span class="towtruck-phone-prefix">+998</span>
-          <input type="tel" placeholder="Telefon raqam" class="towtruck-input-phone" maxlength="9" />
+          <input type="tel" placeholder="Telefon raqam" class="towtruck-input-phone" maxlength="9" data-i18n-placeholder="towPhone"/>
         </div>
-        <button type="submit" class="towtruck-submit" disabled>Davom etish</button>
+        <button type="submit" class="towtruck-submit" disabled data-i18n="towSubmit">Davom etish</button>
       </form>
     </div>
   </div>
@@ -223,7 +223,7 @@
   <div id="profileEditModal" class="profile-edit-modal" style="display:none;">
     <div class="profile-edit-modal-content">
       <button class="profile-edit-modal-close"><img src="/assets/images/close.svg" alt="Close"></button>
-      <h2 class="profile-edit-modal-title">Shaxsiy ma'lumotlarni o'zgartirish</h2>
+      <h2 class="profile-edit-modal-title" data-i18n="profileEditTitle">Shaxsiy ma'lumotlarni o'zgartirish</h2>
       <div class="profile-edit-avatar-block">
         <div class="profile-edit-avatar-wrapper">
           <img id="profileEditAvatarImg" src="/assets/images/user.svg" alt="User" class="profile-edit-avatar-img">
@@ -236,28 +236,28 @@
       </div>
       <form id="profileEditForm" class="profile-edit-form">
         <div class="profile-edit-form-group">
-          <label>Ism Familiya</label>
-          <input type="text" id="profileEditName" value="Sitrizaev To'liqın" required autocomplete="name">
+          <label data-i18n="profileName">Ism Familiya</label>
+          <input type="text" id="profileEditName" value="Sitrizaev To'liqın" required autocomplete="name" data-i18n-placeholder="profileNamePlaceholder">
         </div>
         <div class="profile-edit-form-group">
-          <label>Tug‘ilgan sana</label>
+          <label data-i18n="profileBirth">Tug‘ilgan sana</label>
           <input type="date" id="profileEditBirth" value="" required autocomplete="bday" style="appearance: none; -webkit-appearance: none; background: #fafbfc; border: 1.5px solid #e0e0e0; border-radius: 8px; padding: 10px 15px 10px 12px; font-size: 15px; outline: none; transition: border 0.2s;">
         </div>
         <div class="profile-edit-form-group">
-          <label>Telefon raqam</label>
+          <label data-i18n="profilePhone">Telefon raqam</label>
           <div class="profile-edit-phone-row">
             <span class="profile-edit-phone-prefix">+998</span>
-            <input type="tel" id="profileEditPhone" value="77 404 40 40" required autocomplete="tel" maxlength="9" style="padding-left: 8px;">
+            <input type="tel" id="profileEditPhone" value="77 404 40 40" required autocomplete="tel" maxlength="9" style="padding-left: 8px;" data-i18n-placeholder="profilePhonePlaceholder">
           </div>
         </div>
         <div class="profile-edit-form-group">
-          <label>Jins</label>
+          <label data-i18n="profileGender">Jins</label>
           <div class="profile-edit-gender-group">
-            <button type="button" class="profile-edit-gender-btn active" data-gender="Erkak">Erkak</button>
-            <button type="button" class="profile-edit-gender-btn" data-gender="Ayol">Ayol</button>
+            <button type="button" class="profile-edit-gender-btn active" data-gender="Erkak" data-i18n="profileMale">Erkak</button>
+            <button type="button" class="profile-edit-gender-btn" data-gender="Ayol" data-i18n="profileFemale">Ayol</button>
           </div>
         </div>
-        <button type="submit" class="profile-edit-save-btn">Saqlash</button>
+        <button type="submit" class="profile-edit-save-btn" data-i18n="profileSave">Saqlash</button>
       </form>
     </div>
   </div>
@@ -266,8 +266,8 @@
   <div id="profilePhoneCodeModal" class="modal">
     <div class="modal-content">
       <span id="closeProfilePhoneCodeModal" class="close">&times;</span>
-      <div class="signin-card-title" style="margin-top:0;">Kodini kiriting</div>
-      <div style="font-size:13px;margin-bottom:18px;">Telefonni tasdiqlash uchun <span id="profileModalPhoneNumber">+998 77 404 40 40</span> raqamiga kod yuborildi.</div>
+      <div class="signin-card-title" style="margin-top:0;" data-i18n="codeModalTitle">Kodini kiriting</div>
+      <div style="font-size:13px;margin-bottom:18px;" data-i18n="codeModalDesc">Telefonni tasdiqlash uchun <span id="profileModalPhoneNumber">+998 77 404 40 40</span> raqamiga kod yuborildi.</div>
       <form id="profilePhoneCodeForm" autocomplete="off">
         <div style="display:flex;gap:10px;justify-content:center;margin-bottom:18px;">
           <input maxlength="1" class="signin-phone-code profile-code-input" style="width:48px;" required>
@@ -275,12 +275,13 @@
           <input maxlength="1" class="signin-phone-code profile-code-input" style="width:48px;" required>
           <input maxlength="1" class="signin-phone-code profile-code-input" style="width:48px;" required>
         </div>
-        <div id="profilePhoneCodeTimer" style="text-align:center;margin-bottom:18px;">60 Sekund</div>
-        <button type="submit" class="signin-btn" style="background:#aaa;cursor:not-allowed;" disabled id="profilePhoneCodeConfirmBtn">Tasdiqlash</button>
+        <div id="profilePhoneCodeTimer" style="text-align:center;margin-bottom:18px;" data-i18n="timer">60 Sekund</div>
+        <button type="submit" class="signin-btn" style="background:#aaa;cursor:not-allowed;" disabled id="profilePhoneCodeConfirmBtn" data-i18n="confirmBtn">Tasdiqlash</button>
       </form>
     </div>
   </div>
 
+  <script src="/js/lang.js"></script>
   <script src="/js/script.js"></script>
   <script src="/js/profile.js"></script>
 </body>
