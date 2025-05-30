@@ -7,6 +7,33 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/modal.css">
+  <style>
+      .menu-bar .menu-items {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: #02C463 #eaeaea;
+      }
+      .menu-bar .menu-item {
+        white-space: nowrap;
+        flex-shrink: 1;
+        min-width: -1;
+      }
+      .menu-bar .menu-items::-webkit-scrollbar {
+        height: 4px;
+        background: transparent;
+      }
+      .menu-bar .menu-items::-webkit-scrollbar-thumb {
+        background: #02C463;
+        border-radius: 2px;
+      }
+      .menu-bar .menu-items::-webkit-scrollbar-track {
+        background: #eaeaea;
+        border-radius: 2px;
+      }
+    </style>
 </head>
 <body>
   <header class="header">
@@ -94,7 +121,7 @@
     <a href="#" class="nav-link active" data-i18n="home">Asosiy sahifa</a>
     <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
     <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
-    <a href="#" class="nav-link" data-i18n="fastService">Tezkor xizmat</a>
+    <a href="#" class="nav-link" id="fastServiceModalOpenSidebar" data-i18n="fastService">Tezkor xizmat</a>
     <a href="tel:+99877404040" class="nav-link" data-i18n="phone">+998 77 404 40 40</a>
   </nav>
   

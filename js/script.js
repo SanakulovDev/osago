@@ -182,4 +182,22 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // Fast Service Modal open (header)
+  document.getElementById('fastServiceModalOpen')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('fastServiceModal').style.display = 'block';
+    // Optionally close sidebar if open
+    document.querySelector('.sidebar-menu')?.classList.remove('active');
+    document.querySelector('.sidebar-overlay')?.classList.remove('active');
+  });
+
+  // Fast Service Modal open (sidebar)
+  document.getElementById('fastServiceModalOpenSidebar')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('fastServiceModal').style.display = 'block';
+    // Optionally close sidebar if open
+    document.querySelector('.sidebar-menu')?.classList.remove('active');
+    document.querySelector('.sidebar-overlay')?.classList.remove('active');
+  });
 });

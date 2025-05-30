@@ -472,3 +472,17 @@
   padding-right: 36px;
   outline: none;
 }
+
+.trust-cards {
+  display: flex;
+  gap: 32px;
+  /* height: 270px; */
+  /* max-height: 400px; */
+}
+
+.trust-cards .card {
+  flex: 1 1 220px;
+  max-width: 320px;
+  min-width: 220px;
+  box-sizing: border-box;
+}
