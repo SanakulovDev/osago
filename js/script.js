@@ -200,4 +200,20 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.sidebar-menu')?.classList.remove('active');
     document.querySelector('.sidebar-overlay')?.classList.remove('active');
   });
+
+  // OSAGO ma'lumotlarini localStorage dan o'qib, kerakli joylarga chiqarish
+  var carNumber = localStorage.getItem('osago_car_number') || '';
+  var texSeriya = localStorage.getItem('osago_tex_seriya') || '';
+  var texRaqam = localStorage.getItem('osago_tex_raqam') || '';
+  var passportSeriya = localStorage.getItem('osago_passport_seriya') || '';
+  var passportRaqam = localStorage.getItem('osago_passport_raqam') || '';
+
+  // Mashina modeli va davlat raqami joylashgan joylarni topamiz
+  var infoModel = document.querySelector('.info-value[data-osago="model"]');
+  var infoNumber = document.querySelector('.info-value[data-osago="number"]');
+  var infoFio = document.querySelector('.info-value[data-osago="fio"]');
+
+  if (infoNumber) infoNumber.textContent = carNumber.toUpperCase();
+  // Model va FIO uchun ham localStorage yoki default qiymat ishlatiladi
+  // (Agar kerak bo'lsa, model va FIO ham formdan olinadi)
 });

@@ -19,18 +19,30 @@ function validateInputs() {
   if (carNumber.value.trim().length < 5) valid = false;
   if (texSeriya.value.trim().length !== 2) valid = false;
   if (texRaqam.value.trim().length < 5) valid = false;
+  // Stepper 1: Ma'lumotlar to'g'ri bo'lsa birinchi step active
+  if (valid) {
+    stepper[0].classList.add('active');
+  } else {
+    stepper[0].classList.remove('active');
+  }
   // Passport inputlar ham to'ldirilgan bo'lishi kerak
-  if (passportSeriya.value.trim().length !== 2) valid = false;
-  if (passportRaqam.value.trim().length < 7) valid = false;
+  let passportValid = true;
+  if (passportSeriya.value.trim().length !== 2) passportValid = false;
+  if (passportRaqam.value.trim().length < 7) passportValid = false;
+  // Stepper 2: Passport inputlar ham to'g'ri bo'lsa ikkinchi step active
+  if (valid && passportValid) {
+    stepper[1].classList.add('active');
+  } else {
+    stepper[1].classList.remove('active');
+  }
   // Faqat hammasi to'g'ri bo'lsa, davom etish tugmasi faollashadi
-  passportNextBtn.disabled = !valid;
-  passportNextBtn.style.background = valid ? '#02C463' : '#BDBDBD';
-  passportNextBtn.style.cursor = valid ? 'pointer' : 'not-allowed';
+  passportNextBtn.disabled = !(valid && passportValid);
+  passportNextBtn.style.background = (valid && passportValid) ? '#02C463' : '#BDBDBD';
+  passportNextBtn.style.cursor = (valid && passportValid) ? 'pointer' : 'not-allowed';
 }
 
 // Pasport formasi validatsiyasi
 function validatePassport() {
-  // validateInputs() ni chaqiramiz, chunki barcha inputlar tekshiriladi
   validateInputs();
 }
 
@@ -43,8 +55,6 @@ passportRaqam.addEventListener('input', validatePassport);
 
 form.addEventListener('submit', function(e) {
   e.preventDefault();
-  // Stepperda 2-stepni active qilish
-  stepper[1].classList.add('active');
   passportSeriya.focus();
 });
 
@@ -61,12 +71,35 @@ passportForm.addEventListener('submit', function(e) {
     return;
   }
   e.preventDefault();
-  stepper[1].classList.add('active');
-  callBlock.style.display = 'none';
-  summaryBlock.style.display = 'block';
-  summaryNumber.textContent = carNumber.value.toUpperCase();
-  // summaryModel.textContent = ...;
+  // Ma'lumotlarni localStorage ga saqlash
+  localStorage.setItem('osago_car_number', carNumber.value);
+  localStorage.setItem('osago_tex_seriya', texSeriya.value);
+  localStorage.setItem('osago_tex_raqam', texRaqam.value);
+  localStorage.setItem('osago_passport_seriya', passportSeriya.value);
+  localStorage.setItem('osago_passport_raqam', passportRaqam.value);
+  // window.location orqali boshqa sahifaga o'tish
+  window.location.href = 'osagopolis.html';
 });
+
+// Qo'ng'iroq qiling blokini inputlar to'g'ri to'ldirilganda avtomatik ma'lumot bilan almashtirish
+function updateSummaryBlock() {
+  const valid = carNumber.value.trim().length >= 5 && texSeriya.value.trim().length === 2 && texRaqam.value.trim().length >= 5 && passportSeriya.value.trim().length === 2 && passportRaqam.value.trim().length >= 7;
+  if (valid) {
+    callBlock.style.display = 'none';
+    summaryBlock.style.display = 'block';
+    summaryNumber.textContent = carNumber.value.toUpperCase();
+    // summaryModel.textContent = ...; // Agar model ham bo'lsa shu yerda chiqariladi
+  } else {
+    callBlock.style.display = 'flex';
+    summaryBlock.style.display = 'none';
+  }
+}
+
+carNumber.addEventListener('input', updateSummaryBlock);
+texSeriya.addEventListener('input', updateSummaryBlock);
+texRaqam.addEventListener('input', updateSummaryBlock);
+passportSeriya.addEventListener('input', updateSummaryBlock);
+passportRaqam.addEventListener('input', updateSummaryBlock);
 
 // Stepper CSS
 const style = document.createElement('style');
