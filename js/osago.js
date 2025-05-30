@@ -83,3 +83,29 @@ style.innerHTML = `
 }
 `;
 document.head.appendChild(style);
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize date picker with today's date
+    const dateInput = document.querySelector('input[type="date"]');
+    if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.value = today;
+    }
+
+    // Example stepper functionality
+    const steps = document.querySelectorAll('.osago-step');
+    
+    // This would be called when user progresses through the form
+    function updateStepper(currentStep) {
+        steps.forEach((step, index) => {
+            if (index <= currentStep) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
+    }
+    
+    // Initialize with first step active
+    updateStepper(0);
+});

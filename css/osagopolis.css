@@ -1,0 +1,181 @@
+.section-header {
+  margin-top: 40px;
+  margin-bottom: 44px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.osago-title {
+    color: #02C463;
+    font-size: 32px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.osago-info-title {
+    font-size: 32px;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.osago-stepper {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 28px;
+    width: 100%;
+}
+
+.osago-step {
+    flex: 1;
+    height: 9px;
+    background: #E9ECF8;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.osago-step.active {
+    background: #02C463;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+/* Form Card Styles */
+.form-card {
+    background: #F3F5FC;
+    border-radius: 16px;
+    padding: 2px 26px;
+    border: 1.5px solid #E9ECF8;
+    box-shadow: 0 1px 2px rgba(16,24,40,0.05);
+    flex: 1;
+    min-width: 310px;
+}
+
+.form-group input[type="date"] {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.form-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.policy-info {
+    flex: 2;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group select, 
+.form-group input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid #02C463;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.user-info {
+    flex: 1;
+    height: 160px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.info-label, .info-value {
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    display: block;
+}
+
+.call-info {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 97px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.phone-number {
+    color: #02C463;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+
+@media (max-width: 600px) {
+  .section-header {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .osago-title,
+  .osago-info-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .form-card {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 8px;
+  }
+  .section-header {
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .osago-title,
+  .osago-info-title {
+    font-size: 16px;
+  }
+  .info-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .info-label, .info-value {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .info-value {
+    color: gray;
+  }
+}
