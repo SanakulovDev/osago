@@ -245,6 +245,11 @@ document.addEventListener('DOMContentLoaded', function() {
       // Policy summary blokini yashirish
       if (summaryBlock) summaryBlock.style.display = 'none';
     }
+    // LocalStorage-ga saqlash
+    localStorage.setItem('polis_type', type);
+    localStorage.setItem('polis_duration', duration);
+    localStorage.setItem('polis_date', date);
+    localStorage.setItem('polis_company', company);
   }
   ['polis-type','polis-duration','polis-date','polis-company'].forEach(id => {
     const el = document.getElementById(id);
@@ -255,4 +260,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Sahifa yuklanganda ham policy-summary blokini to'g'ri ko'rsatish
   validatePolisForm();
+
+  // --- Polis davom etish modal ---
+  function showPolisModal() {
+    // Modalni ko'rsatish
+    const modal = document.getElementById('polisInfoModal');
+    if (modal) {
+      modal.style.display = 'flex';
+    }
+  }
+
+  // Modalni yopish uchun eventlar (faqat bir marta va DOMContentLoaded tashqarisida)
+  (function setupPolisModalEvents() {
+    const modal = document.getElementById('polisInfoModal');
+    if (modal) {
+      // Yopish tugmasi
+      const closeBtn = modal.querySelector('#polisInfoModalClose');
+      if (closeBtn) {
+        closeBtn.onclick = function(e) {
+          e.stopPropagation();
+          modal.style.display = 'none';
+        };
+      }
+      // Modal tashqarisiga bosilganda
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+    }
+  })();
+
+  const polisContinueBtn = document.getElementById('polis-continue-btn');
+  if (polisContinueBtn) {
+    polisContinueBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Faqat barcha inputlar va checkbox to'g'ri bo'lsa modal ochiladi
+      const type = document.getElementById('polis-type').value;
+      const duration = document.getElementById('polis-duration').value;
+      const date = document.getElementById('polis-date').value;
+      const company = document.getElementById('polis-company').value;
+      const agree = document.getElementById('polis-agree');
+      if(type && duration && date && company && agree.checked) {
+        showPolisModal();
+      }
+    });
+  }
 });
