@@ -305,3 +305,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+document.getElementById('osagoInfoBtn').onclick = function() {
+      document.getElementById('osagoInfoModal').style.display = 'flex';
+    };
+    document.getElementById('osagoInfoModalClose').onclick = function() {
+      document.getElementById('osagoInfoModal').style.display = 'none';
+    };
+    // Close modal on overlay click
+    document.getElementById('osagoInfoModal').onclick = function(e) {
+      if (e.target === this) this.style.display = 'none';
+    };

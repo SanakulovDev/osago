@@ -1,0 +1,344 @@
+/* OSAGO Stepper Styles */
+.osago-stepper {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 38px;
+  width: 100%;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+.osago-step {
+  width: 220px;
+  height: 9px;
+  background: #e9ecf8;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.osago-step.active {
+  background: #02c463;
+}
+
+/* Card styles */
+.osago-form-row {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.osago-form-card,
+.osago-form-row > div {
+  background: #f3f5fc;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.05);
+  border: 1.5px solid #e9ecf8;
+  box-sizing: border-box;
+}
+
+.osago-form-row > div {
+  padding: 22px 22px 18px 22px;
+  min-width: 425px;
+  max-width: 425px;
+  flex: 1 1 0;
+  box-sizing: border-box;
+}
+
+.osago-form-row > div:last-child {
+  min-width: 180px;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 22px;
+}
+
+/* "Qo'shish" button */
+.osago-form-row button {
+  background: #02c463;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  /* width: 90px; */
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+/* "Davom etish" button */
+.osago-form-row .continue-btn {
+  width: 100%;
+  background: #02c463;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(2,196,99,0.08);
+}
+
+/* Remove default margin from section title */
+.section-title {
+  margin-bottom: 0;
+}
+
+/* New styles for osago-section and its elements */
+.osago-section {
+  background: #fff;
+  padding: 40px 0 80px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.osago-section-header {
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.section-title {
+  color: #02C463;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.section-clearance {
+  font-size: 32px;
+  font-weight: 700;
+  margin-left: 8px;
+  vertical-align: middle;
+  color: #222;
+}
+
+.osago-relatives-info {
+  font-size: 18px;
+  font-weight: 400;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.osago-form-flex {
+    display: flex;
+    justify-content: end;
+}
+
+.osago-info-icon {
+/* display: flex;
+justify-content: end; */
+  margin-left: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.osago-info-icon img {
+  width: 16px;
+  vertical-align: middle;
+}
+
+.osago-summary-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.osago-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.osago-summary-value {
+  font-weight: 500;
+}
+
+.osago-summary-payment {
+  margin-top: 10px;
+  border-top: 1px solid #E9ECF8;
+  padding-top: 8px;
+}
+
+.osago-summary-payment-value {
+  font-weight: 700;
+}
+
+.osago-call-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.osago-call-phone {
+  color: #02C463;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Modal styles */
+.osago-info-modal {
+  display: none;
+  position: fixed;
+  z-index: 1002;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(30, 41, 59, 0.18);
+  justify-content: center;
+  align-items: center;
+}
+
+.osago-info-modal-content {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(16,24,40,0.18);
+  padding: 18px 20px 18px 20px;
+  min-width: 340px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.osago-info-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.osago-info-modal-title {
+  font-size: 15px;
+  color: #222;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-right: 12px;
+}
+
+.osago-info-modal-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+.osago-info-modal-body {
+  background: #f3f5fc;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #222;
+  padding: 13px 14px 13px 14px;
+  line-height: 1.6;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1200px) {
+  .osago-form-row {
+    gap: 18px;
+  }
+  .osago-form-row > div {
+    min-width: 320px;
+    max-width: 100%;
+    padding: 18px 12px 14px 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .osago-form-row {
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: flex-start;
+  }
+  .osago-form-row > div {
+    min-width: 320px;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+  .osago-form-row > div:last-child {
+    min-width: 220px;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .osago-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .section-title,
+  .section-clearance {
+    font-size: 22px;
+  }
+  .osago-stepper {
+    gap: 10px;
+    margin-bottom: 22px;
+    margin-top: 14px;
+  }
+  .osago-step {
+    width: 60px;
+    height: 6px;
+    border-radius: 3px;
+  }
+  .osago-form-row {
+    flex-direction: column;
+    gap: 14px;
+    align-items: stretch;
+  }
+  .osago-form-row > div,
+  .osago-form-row > div:last-child {
+    min-width: 0;
+    max-width: 100%;
+    padding: 14px 8px 10px 8px;
+    margin-bottom: 0;
+  }
+  .osago-summary-title,
+  .osago-call-title {
+    font-size: 15px;
+  }
+  .osago-summary-row,
+  .osago-relatives-info {
+    font-size: 13px;
+  }
+  .osago-call-phone {
+    font-size: 15px;
+  }
+  .osago-form-row button,
+  .osago-form-row {
+    font-size: 14px;
+    padding: 4px 4px;
+  }
+  .continue-btn {
+    padding: 2px 0;
+  }
+}
+
+/* Modal responsiveness */
+@media (max-width: 500px) {
+  .osago-info-modal-content {
+    min-width: 0;
+    max-width: 98vw;
+    padding: 12px 6px 12px 6px;
+    font-size: 13px;
+  }
+  .osago-info-modal-title {
+    font-size: 13px;
+  }
+  .osago-info-modal-body {
+    font-size: 12px;
+    padding: 10px 6px 10px 6px;
+  }
+}

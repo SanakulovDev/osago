@@ -11,7 +11,7 @@ const translations = {
     travel: "Sayohat sug’urtasi",
     accident: "Baxtsiz hodisalardan sug’urta",
     kasko: "KASKO",
-    clearance: "Rasmiylashtirish",
+    clearance: "RASMIYLASHTIRISH",
     property: "Mol-Mulk",
     sport: "Sportchilar sug’urtasi",
     soon: "Tez kunda",
