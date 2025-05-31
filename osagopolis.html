@@ -171,8 +171,8 @@
     <section class="osago-section">
       <div class="container">
         <div class="section-header">
-          <span class="osago-title">OSAGO</span>
-          <span class="osago-info-title">RASMIYLASHTIRISH</span>
+          <span class="osago-title" data-i18n="osago">OSAGO</span>
+          <span class="osago-info-title" data-i18n="clearance">RASMIYLASHTIRISH</span>
         </div>
 
         <!-- Stepper -->
@@ -187,35 +187,35 @@
         <div class="form-container">
           <!-- Policy Information Card -->
           <div class="form-card policy-info">
-            <h3>Polis ma'lumotlari</h3>
+            <h3 data-i18n="policyInfoTitle">Polis ma'lumotlari</h3>
             <div class="form-group">
-              <label>Polis turini tanlang</label>
+              <label data-i18n="policyTypeLabel">Polis turini tanlang</label>
               <select id="polis-type">
-                <option value="">Tanlang</option>
-                <option>Cheklanmagan haydovchilar uchun</option>
-                <option>5 nafargacha haydovchilar uchun</option>
+                <option value="" data-i18n="selectChoose">Tanlang</option>
+                <option data-i18n="policyTypeUnlimited">Cheklanmagan haydovchilar uchun</option>
+                <option data-i18n="policyTypeLimited">5 nafargacha haydovchilar uchun</option>
               </select>
             </div>
             <div class="form-group">
-              <label>Sug'urta muddatini tanlang</label>
+              <label data-i18n="policyDurationLabel">Sug'urta muddatini tanlang</label>
               <select id="polis-duration">
-                <option value="">Tanlang</option>
-                <option>1 yil</option>
-                <option>6 oy</option>
+                <option value="" data-i18n="selectChoose">Tanlang</option>
+                <option data-i18n="policyDuration1y">1 yil</option>
+                <option data-i18n="policyDuration6m">6 oy</option>
               </select>
             </div>
             <div class="form-group form-date">
-              <label>Boshlanish sanasini tanlang</label>
+              <label data-i18n="policyStartDateLabel">Boshlanish sanasini tanlang</label>
               <input type="date" id="polis-date" />
             </div>
             <div class="form-group">
-              <label>Sug'urta kompaniyasini tanlang</label>
+              <label data-i18n="policyCompanyLabel">Sug'urta kompaniyasini tanlang</label>
               <select id="polis-company">
-                <option value="">Tanlang</option>
-                <option>EL SUG'URTA</option>
-                <option>INGO-UZBEKISTAN</option>
-                <option>Kapital sug'urta</option>
-                <option>NEO Insurance</option>
+                <option value="" data-i18n="selectChoose">Tanlang</option>
+                <option data-i18n="companyEl">EL SUG'URTA</option>
+                <option data-i18n="companyIngo">INGO-UZBEKISTAN</option>
+                <option data-i18n="companyKapital">Kapital sug'urta</option>
+                <option data-i18n="companyNeo">NEO Insurance</option>
               </select>
             </div>
             <!-- Continue block for policy (checkbox + button) -->
@@ -241,6 +241,7 @@
                   href="#"
                   style="color: #02c463; text-decoration: underline"
                   target="_blank"
+                  data-i18n="policyOfferLink"
                   >shartlariga roziman.</a
                 >
               </label>
@@ -280,7 +281,7 @@
                   margin-bottom: 16px;
                 "
               >
-                <h3
+                <h3 data-i18n="policySummaryTitle"
                   style="font-size: 20px; font-weight: 600; margin-bottom: 15px"
                 >
                   Sizning polisingiz
@@ -294,7 +295,7 @@
                     margin-bottom: 4px;
                   "
                 >
-                  <span>Sug'urta kompaniyasi</span>
+                  <span data-i18n="policySummaryCompany">Sug'urta kompaniyasi</span>
                   <span id="summary-company">EL SUG'URTA</span>
                 </div>
                 <div
@@ -306,7 +307,7 @@
                     margin-bottom: 4px;
                   "
                 >
-                  <span>Sug'urta summasi</span>
+                  <span data-i18n="policySummaryAmount">Sug'urta summasi</span>
                   <span id="summary-amount">UZS 40,000,000</span>
                 </div>
                 <a
@@ -322,17 +323,17 @@
 
               <!-- User Information Card -->
               <div class="form-card user-info">
-                <h3>Sizning ma'lumotlaringiz</h3>
+                <h3 data-i18n="summaryTitle">Sizning ma'lumotlaringiz</h3>
                 <div class="info-row">
-                  <span class="info-label">Mashina modeli:</span>
+                  <span class="info-label" data-i18n="summaryModel">Mashina modeli:</span>
                   <span class="info-value" data-osago="model">LACETTI</span>
                 </div>
                 <div class="info-row">
-                  <span class="info-label">Davlat ragami:</span>
+                  <span class="info-label" data-i18n="summaryNumber">Davlat raqami:</span>
                   <span class="info-value" data-osago="number">OIP6605B</span>
                 </div>
                 <div class="info-row">
-                  <span class="info-label">F.I.Sh:</span>
+                  <span class="info-label" data-i18n="summaryFio">F.I.Sh:</span>
                   <span class="info-value" data-osago="fio"
                     >Stirzaev Tofiq Saparboyevich</span
                   >
@@ -342,8 +343,8 @@
 
             <!-- Call Card -->
             <div class="form-card call-info">
-              <h3>Qo'ng'iroq qiling:</h3>
-              <a href="tel:+998774044040" class="phone-number"
+              <h3 data-i18n="callTitle">Qo'ng'iroq qiling:</h3>
+              <a href="tel:+998774044040" class="phone-number" data-i18n="phone"
                 >+998 77 404 40 40</a
               >
             </div>
@@ -497,20 +498,20 @@
     <div id="polisInfoModal" class="polis-info-modal" style="display: none;">
       <div class="polis-info-modal-inner" id="polisInfoModalInner">
         <div class="polis-info-modal-header">
-          <span style="font-size:18px; font-weight:600;">Sug'urta ma'lumotlari</span>
+          <span style="font-size:18px; font-weight:600;" data-i18n="policyInfoModalTitle">Sug'urta ma'lumotlari</span>
           <button id="polisInfoModalClose" style="background:none; border:none; font-size:22px; cursor:pointer;">&times;</button>
         </div>
         <div class="polis-info-modal-block" style="margin-bottom:10px;">
-          <div class="polis-info-modal-amount">26 mln</div>
-          <div class="polis-info-modal-desc">Mashinaingizni boshqarayotganingizda insonlarning sog'ligi yoki hayotiga zarar yetkazilganligi uchun maksimal to'lov miqdori</div>
+          <div class="polis-info-modal-amount" data-i18n="policyInfoModalAmount1">26 mln</div>
+          <div class="polis-info-modal-desc" data-i18n="policyInfoModalDesc1">Mashinaingizni boshqarayotganingizda insonlarning sog'ligi yoki hayotiga zarar yetkazilganligi uchun maksimal to'lov miqdori</div>
         </div>
         <div class="polis-info-modal-block">
-          <div class="polis-info-modal-amount">14 mln</div>
-          <div class="polis-info-modal-desc">Mashinaingizni boshqarayotganingizda insonlarning mol-mulkiga zarar yetkazilganligi uchun maksimal to'lov miqdori</div>
+          <div class="polis-info-modal-amount" data-i18n="policyInfoModalAmount2">14 mln</div>
+          <div class="polis-info-modal-desc" data-i18n="policyInfoModalDesc2">Mashinaingizni boshqarayotganingizda insonlarning mol-mulkiga zarar yetkazilganligi uchun maksimal to'lov miqdori</div>
         </div>
       </div>
     </div>
-    <script src="js/lang.js"></script>
+    <script type="module" src="js/lang.js"></script>
     <script src="js/script.js"></script>
     <script src="js/osago.js"></script>
   </body>
