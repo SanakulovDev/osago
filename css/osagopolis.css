@@ -1,3 +1,4 @@
+/* ================== DESKTOP STYLES ================== */
 .section-header {
   margin-top: 40px;
   margin-bottom: 44px;
@@ -10,54 +11,52 @@ section {
 }
 
 .osago-title {
-    color: #02C463;
-    font-size: 32px;
-    font-weight: 700;
-    display: inline-block;
+  color: #02C463;
+  font-size: 32px;
+  font-weight: 700;
+  display: inline-block;
 }
 
 .osago-info-title {
-    font-size: 32px;
-    font-weight: 700;
-    display: inline-block;
-    margin-left: 8px;
+  font-size: 32px;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: 8px;
 }
 
 .osago-stepper {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 28px;
-    width: 100%;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 28px;
+  width: 100%;
 }
 
 .osago-step {
-    flex: 1;
-    height: 9px;
-    background: #E9ECF8;
-    border-radius: 6px;
-    transition: background 0.3s;
+  flex: 1;
+  height: 9px;
+  background: #E9ECF8;
+  border-radius: 6px;
+  transition: background 0.3s;
 }
 
 .osago-step.active {
-    background: #02C463;
+  background: #02C463;
 }
 
-/* Form Container */
 .form-container {
-    display: flex;
-    gap: 22px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
 }
 
-/* Form Card Styles */
 .form-card {
-    background: #F3F5FC;
-    border-radius: 16px;
-    padding: 2px 26px;
-    border: 1.5px solid #E9ECF8;
-    box-shadow: 0 1px 2px rgba(16,24,40,0.05);
-    flex: 1;
-    min-width: 310px;
+  background: #F3F5FC;
+  border-radius: 16px;
+  padding: 2px 26px;
+  border: 1.5px solid #E9ECF8;
+  box-shadow: 0 1px 2px rgba(16,24,40,0.05);
+  flex: 1;
+  max-width: 425px;
 }
 
 .form-group input[type="date"] {
@@ -67,71 +66,124 @@ section {
 }
 
 .form-card h3 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .policy-info {
-    flex: 2;
+  flex: 2;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .form-group label {
-    display: block;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 5px;
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
 }
 
 .form-group select, 
 .form-group input {
-    width: 100%;
-    padding: 10px 15px;
-    border: 2px solid #02C463;
-    border-radius: 8px;
-    font-size: 16px;
-    background-color: #fff;
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #02C463;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #fff;
 }
 
 .user-info {
-    flex: 1;
-    height: 160px;
+  flex: 1;
+  max-height: 160px;
+  width: 410px;
 }
 
 .info-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .info-label, .info-value {
-    font-size: 15px;
-    font-weight: 400;
-    color: #000;
-    display: block;
+  font-size: 15px;
+  font-weight: 400;
+  color: #000;
+  display: block;
 }
 
 .call-info {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 97px;
-    font-size: 20px;
-    font-weight: 600;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 97px;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .phone-number {
-    color: #02C463;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    padding-bottom: 2px;
+  color: #02C463;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.policy-summary {
+  width: 425px;
+  max-height: 145px;
+}
+
+@media (max-width: 990px) {
+  .form-container {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+  }
+  .form-info {
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 100%;
+    align-items: stretch;
+  }
+  .form-info-inner {
+    flex-direction: column !important;
+    width: 100%;
+    align-items: stretch;
+  }
+  .policy-summary,
+  .user-info,
+  .call-info {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    margin: 0 0 12px 0;
+    padding: 2px 10px !important;
+  }
+  .policy-summary {
+    padding: 16px 10px 10px 10px !important;
+  }
+  .form-card {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 10px;
+  }
+  .call-info {
+    height: auto;
+    min-height: 80px;
+    font-size: 18px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 0 10px 0;
+  }
 }
 
 @media (max-width: 600px) {
@@ -144,9 +196,6 @@ section {
   .osago-info-title {
     font-size: 20px;
   }
-}
-
-@media (max-width: 400px) {
   .form-container {
     flex-direction: column;
     gap: 12px;
@@ -157,6 +206,29 @@ section {
     box-sizing: border-box;
     padding: 10px 8px;
   }
+  .policy-summary {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 8px 8px 8px !important;
+  }
+  .info-row {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  .info-label, .info-value {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .info-value {
+    color: gray;
+  }
+  .call-info {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 400px) {
   .section-header {
     font-size: 16px;
     margin-top: 12px;
@@ -166,16 +238,55 @@ section {
   .osago-info-title {
     font-size: 16px;
   }
-  .info-row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  .form-card {
+    padding: 6px 2px;
   }
-  .info-label, .info-value {
+  .policy-summary {
+    padding: 8px 2px 4px 2px !important;
+  }
+}
+
+@media (max-width: 300px) {
+  .section-header {
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .osago-title,
+  .osago-info-title {
+    font-size: 16px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .form-group select {
     font-size: 14px;
-    font-weight: 500;
+    padding: 6px 8px;
   }
+
+  .info-label,
   .info-value {
-    color: gray;
+    font-size: 12px;
+  }
+
+  .phone-number {
+    font-size: 14px;
+  }
+
+  .call-info {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .form-card h3 {
+    font-size: 15px;
+  }
+
+  .form-container {
+    gap: 12px;
   }
 }

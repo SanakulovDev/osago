@@ -216,4 +216,43 @@ document.addEventListener('DOMContentLoaded', function() {
   if (infoNumber) infoNumber.textContent = carNumber.toUpperCase();
   // Model va FIO uchun ham localStorage yoki default qiymat ishlatiladi
   // (Agar kerak bo'lsa, model va FIO ham formdan olinadi)
+  
+  // --- Polis ma'lumotlari validation va button ko'rsatish ---
+  function validatePolisForm() {
+    const type = document.getElementById('polis-type').value;
+    const duration = document.getElementById('polis-duration').value;
+    const date = document.getElementById('polis-date').value;
+    const company = document.getElementById('polis-company').value;
+    const agree = document.getElementById('polis-agree');
+    const btn = document.getElementById('polis-continue-btn');
+    const block = document.getElementById('polis-continue-block');
+    const summaryBlock = document.getElementById('policy-summary-block');
+    const summaryCompany = document.getElementById('summary-company');
+    // Barcha select va date to'ldirilgan bo'lsa block chiqadi
+    if(type && duration && date && company) {
+      block.style.display = 'block';
+      // Policy summary blokini ko'rsatish
+      if (summaryBlock) {
+        summaryBlock.style.display = 'block';
+        if (summaryCompany) summaryCompany.textContent = company;
+      }
+      // Checkbox belgilangan bo'lsa button active
+      btn.disabled = !agree.checked;
+      btn.style.background = agree.checked ? '#02C463' : '#BDBDBD';
+      btn.style.cursor = agree.checked ? 'pointer' : 'not-allowed';
+    } else {
+      block.style.display = 'none';
+      // Policy summary blokini yashirish
+      if (summaryBlock) summaryBlock.style.display = 'none';
+    }
+  }
+  ['polis-type','polis-duration','polis-date','polis-company'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.addEventListener('change', validatePolisForm);
+  });
+  const agree = document.getElementById('polis-agree');
+  if(agree) agree.addEventListener('change', validatePolisForm);
+
+  // Sahifa yuklanganda ham policy-summary blokini to'g'ri ko'rsatish
+  validatePolisForm();
 });

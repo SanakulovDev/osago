@@ -11,235 +11,490 @@
   </head>
   <body>
     <header class="header">
-  <div class="container header-inner">
-    <div class="logo" style="display: flex; align-items: center; gap: 12px;">
-      <a class="logo-link" href="/index.html"><span class="logo-bold">EL </span><span class="logo-green">SUG’URTA</span></a>
-      <button class="burger-menu" id="burgerMenuBtn" aria-label="Open menu" style="margin-left:8px;">
-        <img src="/assets/images/menu.png" alt="Menu">
-      </button>
-    </div>
-    <nav class="main-nav">
-      <a href="/index.html" class="nav-link" data-i18n="home">Asosiy sahifa</a>
-      <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
-      <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
-      <a id="fastServiceModalOpen" href="#" class="nav-link" data-i18n="fastService">Tezkor xizmat</a>
-      <a href="tel:+99877404040" class="nav-link" data-i18n="phone">+998 77 404 40 40</a>
-    </nav>
-    <div class="header-controls">
-      <div class="lang-select"><select id="languageSwitcher"><option value="uz">UZ</option><option value="ru">RU</option></select></div>
-      <div class="user-icon">
-        <a href="/signin.html"><img src="/assets/images/user.svg" alt="user image"></a>
-      </div>
-    </div>
-  </div>
-</header>
-
-  <!-- MENU BAR -->
-  <div class="menu-bar">
-    <div class="container">
-      <div class="menu-items">
-        <div class="menu-item active_navbar" data-i18n="osago">OSAGO</div>
-        <div class="menu-item" data-i18n="travel">Sayohat sug‘urtasi <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item" data-i18n="accident">Baxtsiz hodisalardan sug‘urta <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item" data-i18n="kasko">KASKO <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item" data-i18n="property">Mol-mulk <span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-        <div class="menu-item" data-i18n="sport">Sportchilar sug’urtasi<span class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<div class="menu-soon-arrow"></div></span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sidebar for mobile menu (copied from index.html) -->
-  <div class="sidebar-overlay"></div>
-  <div class="sidebar-menu">
-    <div class="sidebar-header">
-      <div class="sidebar-logo" style="font-weight:600;">
-        EL <span style="color:#02C463;">SUG'URTA</span>
-      </div>
-      <button class="sidebar-close">&times;</button>
-    </div>
-    <nav class="sidebar-mainnav">
-      <a href="/index.html" class="nav-link" data-i18n="home">Asosiy sahifa</a>
-      <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
-      <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
-      <a href="#" class="nav-link" id="fastServiceModalOpenSidebar" data-i18n="fastService">Tezkor xizmat</a>
-      <a href="tel:+99877404040" class="nav-link" data-i18n="phone">+998 77 404 40 40</a>
-    </nav>
-    <span class="sidebar-section-title" data-i18n="footerPartners">Sug'urta turlari</span>
-    <div class="sidebar-nav">
-      <a href="/osago.html" class="sidebar-item" data-i18n="osago">OSAGO</a>
-      <a href="#" class="sidebar-item sidebar-disabled"><span data-i18n="travel">Sayohat sug'urtasi</span><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a>
-      <a href="#" class="sidebar-item sidebar-disabled"><span data-i18n="accident">Baxtsiz hodisalardan sug'urta</span><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a>
-      <a href="#" class="sidebar-item sidebar-disabled"><span data-i18n="kasko">KASKO</span><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a>
-      <a href="#" class="sidebar-item sidebar-disabled"><span data-i18n="property">Mol-Mulk</span><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a>
-      <a href="#" class="sidebar-item sidebar-disabled"><span data-i18n="sport">Sportchilar sug'urtasi</span><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a>
-    </div>
-    <div class="sidebar-footer">
-      <div class="sidebar-lang">UZ</div>
-      <div class="sidebar-user">
-        <a href="/signin.html"><img src="/assets/images/user.svg" alt="user icon"></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- OSAGO FORM SECTION -->
-<section class="osago-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="osago-title">OSAGO</span>
-                <span class="osago-info-title">RASMIYLASHTIRISH</span>
-            </div>
-            
-            <!-- Stepper -->
-            <div class="osago-stepper">
-                <div class="osago-step active"></div>
-                <div class="osago-step active"></div>
-                <div class="osago-step active"></div>
-                <div class="osago-step"></div>
-                <div class="osago-step"></div>
-            </div>
-            
-            <div class="form-container">
-                <!-- Policy Information Card -->
-                <div class="form-card policy-info">
-                    <h3>Polis ma'lumotlari</h3>
-                    <div class="form-group">
-                        <label>Polis turini tanlang</label>
-                        <select>
-                            <option>Cheklanmagan haydovchilar uchun</option>
-                            <option>5 nafargacha haydovchilar uchun</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Sug'urta muddatini tanlang</label>
-                        <select>
-                            <option>1 yil</option>
-                            <option>6 oy</option>
-                        </select>
-                    </div>
-                    <div class="form-group form-date">
-                        <label>Boshlanish sanasini tanlang</label>
-                        <input type="date">
-                    </div>
-                    <div class="form-group">
-                        <label>Sug'urta kompaniyasini tanlang</label>
-                        <select>
-                            <option>EL SUG'URTA</option>
-                            <option>INGO-UZBEKISTAN</option>
-                            <option>Kapital sug'urta</option>
-                            <option>NEO Insurance</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <!-- User Information Card -->
-                <div class="form-card user-info">
-                    <h3>Sizning ma'lumotlaringiz</h3>
-                    <div class="info-row">
-                        <span class="info-label">Mashina modeli:</span>
-                        <span class="info-value" data-osago="model">LACETTI</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">Davlat ragami:</span>
-                        <span class="info-value" data-osago="number">OIP6605B</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">FLSh.:</span>
-                        <span class="info-value" data-osago="fio">Stirzaev Tofiq Saparboyevich</span>
-                    </div>
-                </div>
-                
-                <!-- Call Card -->
-                <div class="form-card call-info">
-                    <h3>Qo'ng'iroq qiling:</h3>
-                    <a href="tel:+998774044040" class="phone-number">+998 77 404 40 40</a>
-                </div>
-            </div>
+      <div class="container header-inner">
+        <div class="logo" style="display: flex; align-items: center; gap: 12px">
+          <a class="logo-link" href="/index.html"
+            ><span class="logo-bold">EL </span
+            ><span class="logo-green">SUG’URTA</span></a
+          >
+          <button
+            class="burger-menu"
+            id="burgerMenuBtn"
+            aria-label="Open menu"
+            style="margin-left: 8px"
+          >
+            <img src="/assets/images/menu.png" alt="Menu" />
+          </button>
         </div>
+        <nav class="main-nav">
+          <a href="/index.html" class="nav-link" data-i18n="home"
+            >Asosiy sahifa</a
+          >
+          <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
+          <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
+          <a
+            id="fastServiceModalOpen"
+            href="#"
+            class="nav-link"
+            data-i18n="fastService"
+            >Tezkor xizmat</a
+          >
+          <a href="tel:+99877404040" class="nav-link" data-i18n="phone"
+            >+998 77 404 40 40</a
+          >
+        </nav>
+        <div class="header-controls">
+          <div class="lang-select">
+            <select id="languageSwitcher">
+              <option value="uz">UZ</option>
+              <option value="ru">RU</option>
+            </select>
+          </div>
+          <div class="user-icon">
+            <a href="/signin.html"
+              ><img src="/assets/images/user.svg" alt="user image"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MENU BAR -->
+    <div class="menu-bar">
+      <div class="container">
+        <div class="menu-items">
+          <div class="menu-item active_navbar" data-i18n="osago">OSAGO</div>
+          <div class="menu-item" data-i18n="travel">
+            Sayohat sug‘urtasi
+            <span class="menu-soon-badge" style="display: none" data-i18n="soon"
+              >Tez kunda
+              <div class="menu-soon-arrow"></div
+            ></span>
+          </div>
+          <div class="menu-item" data-i18n="accident">
+            Baxtsiz hodisalardan sug‘urta
+            <span class="menu-soon-badge" style="display: none" data-i18n="soon"
+              >Tez kunda
+              <div class="menu-soon-arrow"></div
+            ></span>
+          </div>
+          <div class="menu-item" data-i18n="kasko">
+            KASKO
+            <span class="menu-soon-badge" style="display: none" data-i18n="soon"
+              >Tez kunda
+              <div class="menu-soon-arrow"></div
+            ></span>
+          </div>
+          <div class="menu-item" data-i18n="property">
+            Mol-mulk
+            <span class="menu-soon-badge" style="display: none" data-i18n="soon"
+              >Tez kunda
+              <div class="menu-soon-arrow"></div
+            ></span>
+          </div>
+          <div class="menu-item" data-i18n="sport">
+            Sportchilar sug’urtasi<span
+              class="menu-soon-badge"
+              style="display: none"
+              data-i18n="soon"
+              >Tez kunda
+              <div class="menu-soon-arrow"></div
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar for mobile menu (copied from index.html) -->
+    <div class="sidebar-overlay"></div>
+    <div class="sidebar-menu">
+      <div class="sidebar-header">
+        <div class="sidebar-logo" style="font-weight: 600">
+          EL <span style="color: #02c463">SUG'URTA</span>
+        </div>
+        <button class="sidebar-close">&times;</button>
+      </div>
+      <nav class="sidebar-mainnav">
+        <a href="/index.html" class="nav-link" data-i18n="home"
+          >Asosiy sahifa</a
+        >
+        <a href="#" class="nav-link" data-i18n="about">Biz haqimizda</a>
+        <a href="#" class="nav-link" data-i18n="partners">Hamkorlar</a>
+        <a
+          href="#"
+          class="nav-link"
+          id="fastServiceModalOpenSidebar"
+          data-i18n="fastService"
+          >Tezkor xizmat</a
+        >
+        <a href="tel:+99877404040" class="nav-link" data-i18n="phone"
+          >+998 77 404 40 40</a
+        >
+      </nav>
+      <span class="sidebar-section-title" data-i18n="footerPartners"
+        >Sug'urta turlari</span
+      >
+      <div class="sidebar-nav">
+        <a href="/osago.html" class="sidebar-item" data-i18n="osago">OSAGO</a>
+        <a href="#" class="sidebar-item sidebar-disabled"
+          ><span data-i18n="travel">Sayohat sug'urtasi</span
+          ><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a
+        >
+        <a href="#" class="sidebar-item sidebar-disabled"
+          ><span data-i18n="accident">Baxtsiz hodisalardan sug'urta</span
+          ><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a
+        >
+        <a href="#" class="sidebar-item sidebar-disabled"
+          ><span data-i18n="kasko">KASKO</span
+          ><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a
+        >
+        <a href="#" class="sidebar-item sidebar-disabled"
+          ><span data-i18n="property">Mol-Mulk</span
+          ><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a
+        >
+        <a href="#" class="sidebar-item sidebar-disabled"
+          ><span data-i18n="sport">Sportchilar sug'urtasi</span
+          ><span class="sidebar-soon" data-i18n="soon">Tez kunda</span></a
+        >
+      </div>
+      <div class="sidebar-footer">
+        <div class="sidebar-lang">UZ</div>
+        <div class="sidebar-user">
+          <a href="/signin.html"
+            ><img src="/assets/images/user.svg" alt="user icon"
+          /></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OSAGO FORM SECTION -->
+    <section class="osago-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="osago-title">OSAGO</span>
+          <span class="osago-info-title">RASMIYLASHTIRISH</span>
+        </div>
+
+        <!-- Stepper -->
+        <div class="osago-stepper">
+          <div class="osago-step active"></div>
+          <div class="osago-step active"></div>
+          <div class="osago-step active"></div>
+          <div class="osago-step"></div>
+          <div class="osago-step"></div>
+        </div>
+
+        <div class="form-container">
+          <!-- Policy Information Card -->
+          <div class="form-card policy-info">
+            <h3>Polis ma'lumotlari</h3>
+            <div class="form-group">
+              <label>Polis turini tanlang</label>
+              <select id="polis-type">
+                <option value="">Tanlang</option>
+                <option>Cheklanmagan haydovchilar uchun</option>
+                <option>5 nafargacha haydovchilar uchun</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Sug'urta muddatini tanlang</label>
+              <select id="polis-duration">
+                <option value="">Tanlang</option>
+                <option>1 yil</option>
+                <option>6 oy</option>
+              </select>
+            </div>
+            <div class="form-group form-date">
+              <label>Boshlanish sanasini tanlang</label>
+              <input type="date" id="polis-date" />
+            </div>
+            <div class="form-group">
+              <label>Sug'urta kompaniyasini tanlang</label>
+              <select id="polis-company">
+                <option value="">Tanlang</option>
+                <option>EL SUG'URTA</option>
+                <option>INGO-UZBEKISTAN</option>
+                <option>Kapital sug'urta</option>
+                <option>NEO Insurance</option>
+              </select>
+            </div>
+            <!-- Continue block for policy (checkbox + button) -->
+            <div
+              id="polis-continue-block"
+              style="display: none; margin-top: 18px"
+            >
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  font-size: 14px;
+                "
+              >
+                <input
+                  type="checkbox"
+                  id="polis-agree"
+                  style="width: 18px; height: 18px"
+                />
+                Majburiy sug'urta ofertasi
+                <a
+                  href="#"
+                  style="color: #02c463; text-decoration: underline"
+                  target="_blank"
+                  >shartlariga roziman.</a
+                >
+              </label>
+              <button
+                id="polis-continue-btn"
+                style="
+                  width: 100%;
+                  background: #bdbdbd;
+                  color: #fff;
+                  border: none;
+                  border-radius: 10px;
+                  padding: 13px 0;
+                  margin-bottom: 12px;
+                  font-size: 17px;
+                  font-weight: 600;
+                  cursor: not-allowed;
+                  margin-top: 10px;
+                "
+                disabled
+              >
+                Davom etish
+              </button>
+            </div>
+          </div>
+
+          <div class="form-info" style="display: flex; gap: 25px">
+            <div class="form-info-inner" style="display: flex; flex-direction: column">
+              <!-- Policy Summary Card (dynamic, hidden by default) -->
+              <div
+                class="form-card policy-summary"
+                id="policy-summary-block"
+                style="
+                  display: none;
+                  background: #f6f8fc;
+                  border-radius: 12px;
+                  padding: 18px 18px 12px 18px;
+                  margin-bottom: 16px;
+                "
+              >
+                <h3
+                  style="font-size: 20px; font-weight: 600; margin-bottom: 15px"
+                >
+                  Sizning polisingiz
+                </h3>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 400;
+                    font-size: 15px;
+                    margin-bottom: 4px;
+                  "
+                >
+                  <span>Sug'urta kompaniyasi</span>
+                  <span id="summary-company">EL SUG'URTA</span>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-weight: 400;
+                    font-size: 15px;
+                    margin-bottom: 4px;
+                  "
+                >
+                  <span>Sug'urta summasi</span>
+                  <span id="summary-amount">UZS 40,000,000</span>
+                </div>
+                <a
+                  href="#"
+                  style="
+                    color: #02c463;
+                    font-size: 14px;
+                    text-decoration: underline;
+                  "
+                  >Batafsil</a
+                >
+              </div>
+
+              <!-- User Information Card -->
+              <div class="form-card user-info">
+                <h3>Sizning ma'lumotlaringiz</h3>
+                <div class="info-row">
+                  <span class="info-label">Mashina modeli:</span>
+                  <span class="info-value" data-osago="model">LACETTI</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Davlat ragami:</span>
+                  <span class="info-value" data-osago="number">OIP6605B</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">F.I.Sh:</span>
+                  <span class="info-value" data-osago="fio"
+                    >Stirzaev Tofiq Saparboyevich</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Call Card -->
+            <div class="form-card call-info">
+              <h3>Qo'ng'iroq qiling:</h3>
+              <a href="tel:+998774044040" class="phone-number"
+                >+998 77 404 40 40</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-  <footer class="footer">
-    <div class="container footer-flex">
-      <div class="footer-brand">
-        <a class="logo" href="/index.html"><span class="logo-bold">EL </span><span class="logo-green">SUG’URTA</span></a>
-        <p data-i18n="footerSlogan">Sug’urta bo’yicha haqiqiy yordamchingiz</p>
-        <a href="tel:+99877404040" class="footer-phone" data-i18n="phone">+998 77 404 40 40</a>
-        <div class="social-icons">
-            <img src="assets/images/insta.png" alt="Instagram">
-            <img src="assets/images/telegram.png" alt="Telegram">
-            <img src="assets/images/youtube.png" alt="YouTube">
-            <img src="assets/images/tiktok.png" alt="TikTok">
-            <img src="assets/images/fb.png" alt="Facebook">
+    <footer class="footer">
+      <div class="container footer-flex">
+        <div class="footer-brand">
+          <a class="logo" href="/index.html"
+            ><span class="logo-bold">EL </span
+            ><span class="logo-green">SUG’URTA</span></a
+          >
+          <p data-i18n="footerSlogan">
+            Sug’urta bo’yicha haqiqiy yordamchingiz
+          </p>
+          <a href="tel:+99877404040" class="footer-phone" data-i18n="phone"
+            >+998 77 404 40 40</a
+          >
+          <div class="social-icons">
+            <img src="assets/images/insta.png" alt="Instagram" />
+            <img src="assets/images/telegram.png" alt="Telegram" />
+            <img src="assets/images/youtube.png" alt="YouTube" />
+            <img src="assets/images/tiktok.png" alt="TikTok" />
+            <img src="assets/images/fb.png" alt="Facebook" />
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="column">
+            <a href="/index.html" data-i18n="footerHome">Asosiy sahifa</a>
+            <a href="/osago.html" data-i18n="footerOsago">OSAGO</a>
+            <a href="#" data-i18n="footerTravel">Sayohat</a>
+            <a href="#" data-i18n="footerPartners">Hamkorlik</a>
+          </div>
+          <div class="column">
+            <h4 data-i18n="footerSupport">Mijozlarni Qo‘llab-Quvvatlash</h4>
+            <a href="#" data-i18n="footerFaq">Tez-tez so‘raladigan savollar</a>
+            <a href="#" data-i18n="footerPrivacy">Maxfiylik siyosati</a>
+          </div>
         </div>
       </div>
-      <div class="footer-links">
-        <div class="column">
-          <a href="/index.html" data-i18n="footerHome">Asosiy sahifa</a>
-          <a href="/osago.html" data-i18n="footerOsago">OSAGO</a>
-          <a href="#" data-i18n="footerTravel">Sayohat</a>
-          <a href="#" data-i18n="footerPartners">Hamkorlik</a>
+      <div class="footer-bottom">
+        <p data-i18n="footerCopyright">
+          © “elsu.uz”, 2025 Barcha huquqlar himoyalangan.
+        </p>
+      </div>
+    </footer>
+    <!-- Fast Service Modal (index.html dagidek) -->
+    <div id="fastServiceModal" class="fast-serves-modal">
+      <div class="fast-modal-content">
+        <div class="fast-service-grid">
+          <div class="fast-service-card">
+            <div class="fast-service-title" data-i18n="euro">Yevroprotokol</div>
+            <div class="fast-service-desc" data-i18n="euroDesc">
+              Yevroprotokol to'ldirish namunasi
+            </div>
+            <button class="fast-service-btn" data-i18n="use">
+              Foydalanish
+            </button>
+            <div class="soon-badge" style="display: none" data-i18n="soon">
+              Tez kunda<span class="soon-arrow"></span>
+            </div>
+          </div>
+          <div class="fast-service-card">
+            <div class="fast-service-title" data-i18n="tow">
+              Evakuator chaqirish
+            </div>
+            <div class="fast-service-desc" data-i18n="towDesc">
+              Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor
+              yordam chaqirish xizmati.
+            </div>
+            <button class="fast-service-btn" id="towtruckBtn" data-i18n="use">
+              Foydalanish
+            </button>
+          </div>
+          <div class="fast-service-card">
+            <div class="fast-service-title" data-i18n="fuel">Benzin</div>
+            <div class="fast-service-desc" data-i18n="fuelDesc">
+              Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan
+              qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent
+              shahri va atrofi bo‘yicha)
+            </div>
+            <button class="fast-service-btn" data-i18n="use">
+              Foydalanish
+            </button>
+            <div class="soon-badge" style="display: none" data-i18n="soon">
+              Tez kunda<span class="soon-arrow"></span>
+            </div>
+          </div>
+          <div class="fast-service-card">
+            <div class="fast-service-title" data-i18n="eval">Baholash</div>
+            <div class="fast-service-desc" data-i18n="evalDesc">
+              Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq
+              qiling va baholovchi bilan bog‘laning
+            </div>
+            <button class="fast-service-btn" data-i18n="use">
+              Foydalanish
+            </button>
+            <div class="soon-badge" style="display: none" data-i18n="soon">
+              Tez kunda<span class="soon-arrow"></span>
+            </div>
+          </div>
         </div>
-        <div class="column">
-          <h4 data-i18n="footerSupport">Mijozlarni Qo‘llab-Quvvatlash</h4>
-          <a href="#" data-i18n="footerFaq">Tez-tez so‘raladigan savollar</a>
-          <a href="#" data-i18n="footerPrivacy">Maxfiylik siyosati</a>
-        </div>
+        <button id="fastServiceModalClose">
+          <img src="/assets/images/close.svg" alt="Close" />
+        </button>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p data-i18n="footerCopyright">© “elsu.uz”, 2025 Barcha huquqlar himoyalangan.</p>
-    </div>
-  </footer>
-  <!-- Fast Service Modal (index.html dagidek) -->
-  <div id="fastServiceModal" class="fast-serves-modal">
-    <div class="fast-modal-content">
-      <div class="fast-service-grid">
-        <div class="fast-service-card">
-          <div class="fast-service-title" data-i18n="euro">Yevroprotokol</div>
-          <div class="fast-service-desc" data-i18n="euroDesc">Yevroprotokol to'ldirish namunasi</div>
-          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
-          <div class="soon-badge" style="display:none;" data-i18n="soon">Tez kunda<span class="soon-arrow"></span></div>
-        </div>
-        <div class="fast-service-card">
-          <div class="fast-service-title" data-i18n="tow">Evakuator chaqirish</div>
-          <div class="fast-service-desc" data-i18n="towDesc">Yo‘l-transport hodisasi yuz berganda yoki texnik nosozlikda tezkor yordam chaqirish xizmati.</div>
-          <button class="fast-service-btn" id="towtruckBtn" data-i18n="use">Foydalanish</button>
-        </div>
-        <div class="fast-service-card">
-          <div class="fast-service-title" data-i18n="fuel">Benzin</div>
-          <div class="fast-service-desc" data-i18n="fuelDesc">Yo‘lda favqulodda yoqilg‘ingiz tugab qoldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va benzin etkazib berishlarini so‘rang (Toshkent shahri va atrofi bo‘yicha)</div>
-          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
-          <div class="soon-badge" style="display:none;" data-i18n="soon">Tez kunda<span class="soon-arrow"></span></div>
-        </div>
-        <div class="fast-service-card">
-          <div class="fast-service-title" data-i18n="eval">Baholash</div>
-          <div class="fast-service-desc" data-i18n="evalDesc">Zararni baholash kerak bo‘ldimi? Tugmani bosish bilan qo‘ng‘iroq qiling va baholovchi bilan bog‘laning</div>
-          <button class="fast-service-btn" data-i18n="use">Foydalanish</button>
-          <div class="soon-badge" style="display:none;" data-i18n="soon">Tez kunda<span class="soon-arrow"></span></div>
-        </div>
+    <!-- Evakuator chaqirish modal (index.html dagidek) -->
+    <div id="towtruckModal" class="towtruck-modal" style="display: none">
+      <div class="towtruck-modal-content">
+        <button id="towtruckModalClose" class="towtruck-modal-close">
+          <img src="/assets/images/close.svg" alt="Close" />
+        </button>
+        <h2 data-i18n="towTitle">Evakuator chaqirish</h2>
+        <p data-i18n="towDescModal">
+          Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon
+          raqamingizni kiriting.
+        </p>
+        <form class="towtruck-form">
+          <input
+            type="text"
+            placeholder="Ism familiya"
+            class="towtruck-input"
+            data-i18n-placeholder="towName"
+          />
+          <div class="towtruck-phone-row">
+            <span class="towtruck-phone-prefix">+998</span>
+            <input
+              type="tel"
+              placeholder="Telefon raqam"
+              class="towtruck-input-phone"
+              maxlength="9"
+              data-i18n-placeholder="towPhone"
+            />
+          </div>
+          <button
+            type="submit"
+            class="towtruck-submit"
+            disabled
+            data-i18n="towSubmit"
+          >
+            Davom etish
+          </button>
+        </form>
       </div>
-      <button id="fastServiceModalClose"><img src="/assets/images/close.svg" alt="Close"></button>
     </div>
-  </div>
-  <!-- Evakuator chaqirish modal (index.html dagidek) -->
-  <div id="towtruckModal" class="towtruck-modal" style="display:none;">
-    <div class="towtruck-modal-content">
-      <button id="towtruckModalClose" class="towtruck-modal-close">
-        <img src="/assets/images/close.svg" alt="Close">
-      </button>
-      <h2 data-i18n="towTitle">Evakuator chaqirish</h2>
-      <p data-i18n="towDescModal">Iltimos, siz bilan bog’lanishimiz uchun ism, familiyangiz va telefon raqamingizni kiriting.</p>
-      <form class="towtruck-form">
-        <input type="text" placeholder="Ism familiya" class="towtruck-input" data-i18n-placeholder="towName"/>
-        <div class="towtruck-phone-row">
-          <span class="towtruck-phone-prefix">+998</span>
-          <input type="tel" placeholder="Telefon raqam" class="towtruck-input-phone" maxlength="9" data-i18n-placeholder="towPhone"/>
-        </div>
-        <button type="submit" class="towtruck-submit" disabled data-i18n="towSubmit">Davom etish</button>
-      </form>
-    </div>
-  </div>
-  <script src="js/lang.js"></script>
-  <script src="js/script.js"></script> 
-  <script src="js/osago.js"></script>
-</body>
+    <script src="js/lang.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/osago.js"></script>
+  </body>
 </html>
