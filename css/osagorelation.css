@@ -246,6 +246,99 @@ justify-content: end; */
   line-height: 1.6;
 }
 
+/* New styles for relatives forms */
+.osago-relatives-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.osago-relative-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 10px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+.osago-relative-form .form-number {
+  grid-column: 1 / 2;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+  font-size: 15px;
+  align-self: center;
+}
+.osago-relative-form .remove-btn {
+  grid-column: 2 / 3;
+  justify-self: end;
+  align-self: center;
+  position: static;
+  background: none;
+  color: #e74c3c;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0;
+}
+.osago-relative-form input,
+.osago-relative-form select {
+  width: 100%;
+  border: 1.5px solid #02C463;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 15px;
+  background: #fff;
+  outline: none;
+  box-sizing: border-box;
+  transition: border 0.2s;
+  height: 44px;
+}
+.osago-relative-form input:focus,
+.osago-relative-form select:focus {
+  border: 1.5px solid #02C463;
+}
+.osago-relative-form input[type="date"]::-webkit-input-placeholder {
+  color: #888;
+}
+.osago-relative-form input[type="date"]::-moz-placeholder {
+  color: #888;
+}
+.osago-relative-form input[type="date"]:-ms-input-placeholder {
+  color: #888;
+}
+.osago-relative-form input[type="date"]::placeholder {
+  color: #888;
+}
+.osago-relatives-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+@media (max-width: 700px) {
+  .osago-relative-form {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    gap: 8px 0;
+  }
+  .osago-relative-form .form-number {
+    font-size: 13px;
+  }
+  .osago-relative-form input,
+  .osago-relative-form select {
+    font-size: 14px;
+    height: 38px;
+    padding: 8px 10px;
+  }
+}
+
 /* Responsive tweaks */
 @media (max-width: 1200px) {
   .osago-form-row {
