@@ -1,10 +1,11 @@
-// Enable 'Davom etish' button only if phone is 9 digits and checkbox is checked
+// 'Davom etish' tugmasini faqat telefon raqami 9 ta raqam va checkbox belgilangan bo'lsa yoqiladi
 
 document.addEventListener('DOMContentLoaded', function () {
   const phoneInput = document.getElementById('phone-input');
   const checkbox = document.getElementById('privacy-checkbox');
   const submitBtn = document.querySelector('.osagophone-phone-submit-btn');
 
+  // Telefon raqami va checkboxni tekshirish funksiyasi
   function validate() {
     const phoneValid = phoneInput && phoneInput.value.length === 9 && /^\d{9}$/.test(phoneInput.value);
     const checked = checkbox && checkbox.checked;
@@ -20,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
   if (phoneInput) phoneInput.addEventListener('input', validate);
   if (checkbox) checkbox.addEventListener('change', validate);
 
-  // Optional: Prevent non-numeric input
+  // Ixtiyoriy: faqat raqamli kiritishni ta'minlash
   if (phoneInput) {
     phoneInput.addEventListener('input', function (e) {
       this.value = this.value.replace(/[^\d]/g, '');
     });
   }
 
-  // Phone code modal logic
+  // Telefon kodini kiritish uchun modal oynasi logikasi
   const phoneForm = document.getElementById('phone-form');
   const phoneCodeModal = document.getElementById('phoneCodeModal');
   const phoneCodeModalClose = document.getElementById('phoneCodeModalClose');
@@ -38,22 +39,22 @@ document.addEventListener('DOMContentLoaded', function () {
   let timer = null;
   let seconds = 30;
 
-  // Open modal on form submit
+  // Formani yuborishda modalni ochish
   if (phoneForm && phoneCodeModal) {
     phoneForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      // Set phone number in modal
+      // Modalda telefon raqamini ko'rsatish
       if (modalPhoneNumber && phoneInput) {
         const val = phoneInput.value;
         modalPhoneNumber.textContent = '+998 ' + val.replace(/(\d{2})(\d{3})(\d{2})(\d{2})/, '$1 $2 $3 $4');
       }
-      // Reset code inputs
+      // Kod kiritish inputlarini tozalash
       codeInputs.forEach(input => input.value = '');
       codeConfirmBtn.disabled = true;
       codeConfirmBtn.classList.remove('enabled');
-      // Show modal
+      // Modalni ko'rsatish
       phoneCodeModal.classList.add('active');
-      // Start timer
+      // Taymerni boshlash
       seconds = 30;
       if (codeTimer) codeTimer.textContent = seconds + ' Sekund';
       if (timer) clearInterval(timer);
@@ -62,13 +63,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (codeTimer) codeTimer.textContent = seconds > 0 ? (seconds + ' Sekund') : 'Qayta yuborish';
         if (seconds <= 0) clearInterval(timer);
       }, 1000);
-      // Focus first input
+      // Birinchi inputga fokus berish
       if (codeInputs[0]) codeInputs[0].focus();
       document.body.classList.add('modal-open');
     });
   }
 
-  // Close modal
+  // Modalni yopish (krestik bosilganda)
   if (phoneCodeModalClose && phoneCodeModal) {
     phoneCodeModalClose.addEventListener('click', function() {
       phoneCodeModal.classList.remove('active');
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (timer) clearInterval(timer);
     });
   }
-  // Close modal on background click
+  // Modal foniga bosilganda yopish
   if (phoneCodeModal) {
     phoneCodeModal.addEventListener('click', function(e) {
       if (e.target === phoneCodeModal) {
@@ -86,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-  // Code input navigation and confirm button enable
+  // Kod inputlarida harakat va tasdiqlash tugmasini yoqish
   codeInputs.forEach((input, idx) => {
     input.addEventListener('input', function() {
       this.value = this.value.replace(/[^\d]/g, '');
@@ -101,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+  // Kod inputlari to'liq to'ldirilganini tekshirish
   function checkCodeInputs() {
     let allFilled = Array.from(codeInputs).every(input => input.value.length === 1);
     if (allFilled) {
@@ -111,15 +113,15 @@ document.addEventListener('DOMContentLoaded', function () {
       codeConfirmBtn.classList.remove('enabled');
     }
   }
-  // Prevent form submit in modal (if any)
+  // Modal ichidagi formani yuborishni oldini olish va tasdiqlash tugmasi bosilganda final sahifaga o'tkazish
   if (codeConfirmBtn && phoneCodeModal) {
     codeConfirmBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      // Here you would verify the code
+      // Bu yerda kodni tekshirishingiz mumkin
       phoneCodeModal.classList.remove('active');
       document.body.classList.remove('modal-open');
       if (timer) clearInterval(timer);
-      // Success action here
+      window.location.href = 'osagofinal.html';
     });
   }
 });
