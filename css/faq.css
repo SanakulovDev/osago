@@ -10,7 +10,69 @@
 .faq-heading span {
     color: #02C463;
 }
+.faq-item {
+    background: #fff;
+    border: 1.5px solid #E9E9E9;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    transition: box-shadow 0.2s;
+    box-shadow: none;
+}
+.faq-item.active {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.faq-item-content {
+    padding: 22px 20px 22px 20px;
+}
 .faq-item-content-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.faq-item-content-top h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #181818;
+    margin: 0;
+}
+.faq-answer {
+    display: none;
+    padding: 16px 0 0 0;
+    color: #222;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 8px;
+    padding-bottom: 8px;
+}
+.faq-item.active .faq-answer {
+    display: block;
+}
+.faq-toggle {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s;
+    padding-left: 8px;
+}
+@media (max-width: 600px) {
+    .faq-heading {
+        font-size: 24px;
+        margin-bottom: 28px;
+    }
+    .faq-item-content-top h2 {
+        font-size: 15px;
+    }
+    .faq-answer {
+        font-size: 13px;
+    }
+    .faq-item-content {
+        padding: 14px 10px 6px 10px;
+    }
+    .faq-toggle {
+        width: 20px;
+        height: 20px;
+    }
+    .faq-item {
+        border-radius: 8px;
+    }
 }
