@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/modal.css" />
-    <link rel="stylesheet" href="css/osagorelation.css" />
+    <link rel="stylesheet" href="css/osagophone.css" /> 
   </head>
   <body>
     <header class="header">
@@ -82,76 +82,45 @@
   </div>
 
   <!-- OSAGO FORM SECTION -->
-  <section class="osago-section">
+  <section class="osagophone-section">
     <div class="container">
-      <div class="osago-section-header">
-        <span class="section-title" data-i18n="osago">OSAGO</span>
-        <span class="section-clearance" data-i18n="clearance">RASMIYLASHTIRISH</span>
+      <div class="osagophone-title-row">
+        <span class="osagophone-title" data-i18n="osago">OSAGO</span>
+        <span class="osagophone-clearance" data-i18n="clearance">RASMIYLASHTIRISH</span>
       </div>
-      <!-- Stepper -->
-      <div class="osago-stepper">
-        <div class="osago-step active"></div>
-        <div class="osago-step active"></div>
-        <div class="osago-step active"></div>
-        <div class="osago-step active"></div>
-        <div class="osago-step"></div>
+      <div class="osagophone-stepper">
+        <div class="osagophone-step active"></div>
+        <div class="osagophone-step active"></div>
+        <div class="osagophone-step active"></div>
+        <div class="osagophone-step active"></div>
+        <div class="osagophone-step active"></div>
       </div>
-      <div class="osago-form-row">
-        <!-- Main driver relatives info -->
-        <div>
-            <div class="osago-form-flex">
-                <div class="osago-relatives-info" data-i18n="relativesInfo">
-                    Avtomobilni boshqaradigan <b>Sitrizaev To‘lqin</b> ning yaqin qarindoshlari haqida ma’lumot
-                </div>
-                <span title="Yaqin qarindoshlar haqida ma’lumot" class="osago-info-icon" id="osagoInfoBtn">
-                  <img src="/assets/images/info.svg" alt="info">
-                </span>
+      <div class="osagophone-form-row">
+        <!-- Phone input card -->
+        <div class="osagophone-form-card osagophone-phone-card">
+          <form id="phone-form" autocomplete="off">
+            <label for="phone-input" class="osagophone-phone-label">Davom etish uchun telefon raqamingizni kiriting</label>
+            <div class="osagophone-phone-input-row">
+              <div class="osagophone-phone-prefix-box">+998</div>
+              <input id="phone-input" type="tel" placeholder="Telefon raqam" maxlength="9" required />
             </div>
-          <button data-i18n="addBtn">Qo'shish</button>
-          <button class="continue-btn" data-i18n="continueBtn">Davom etish</button>
-        </div>
-        <!-- Summary info block -->
-        <div>
-          <div class="osago-summary-title" data-i18n="summaryTitle">Sizning ma'lumotlaringiz</div>
-          <div class="osago-summary-row">
-            <span data-i18n="summaryModel">Mashina modeli:</span><span class="osago-summary-value">LACETTI</span>
-          </div>
-          <div class="osago-summary-row">
-            <span data-i18n="summaryNumber">Davlat raqami:</span><span class="osago-summary-value">OIP660SB</span>
-          </div>
-          <div class="osago-summary-row">
-            <span data-i18n="summaryFio">F.I.Sh.</span><span class="osago-summary-value">Sitrizaev To‘lqin Saparboyvich</span>
-          </div>
-          <div class="osago-summary-row">
-            <span data-i18n="summaryDrivers">Qo‘shilgan haydovchilar</span><span class="osago-summary-value">0</span>
-          </div>
-          <div class="osago-summary-row osago-summary-payment">
-            <span data-i18n="summaryPayment">To‘lov</span><span class="osago-summary-payment-value">UZS 168,000 So‘m</span>
-          </div>
+            <div class="osagophone-phone-checkbox-row">
+              <input type="checkbox" id="privacy-checkbox" />
+              <label for="privacy-checkbox" class="osagophone-privacy-label">
+                Avtorizatsiyadan o‘tish orqali siz <span style="color: #02C463;">shaxsiy ma’lumotlarni qayta ishlash siyosatiga rozilik bildirasiz</span>
+              </label>
+            </div>
+            <button type="submit" class="osagophone-phone-submit-btn" disabled>Davom etish</button>
+          </form>
         </div>
         <!-- Call block -->
-        <div>
-          <div class="osago-call-title" data-i18n="callTitle">Qo'ng'iroq qiling:</div>
-          <a href="tel:+99877404040" class="osago-call-phone" data-i18n="phone">+998 77 404 40 40</a>
+        <div class="osagophone-form-card osagophone-call-card">
+          <div class="osagophone-call-title">Qo‘ng‘iroq qiling:</div>
+          <a href="tel:+99877404040" class="osagophone-call-phone">+998 77 404 40 40</a>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Info Modal -->
-  <div id="osagoInfoModal" class="osago-info-modal">
-    <div class="osago-info-modal-content">
-      <div class="osago-info-modal-header">
-        <span class="osago-info-modal-title" data-i18n="relativesInfoModalTitle">
-          Avtomobilingizni Sizsiz ham boshqaradigan yaqin qarindoshlaringizni kiriting.
-        </span>
-        <button class="osago-info-modal-close" id="osagoInfoModalClose">&times;</button>
-      </div>
-      <div class="osago-info-modal-body" data-i18n="relativesInfoModalBody">
-        Agar yaqin qarindoshingiz sug‘urta polisda ko‘rsatilmagan holatda YTH sodir qilsa sug‘urta kompaniyasi ushbu holat uchun to‘lov amalga oshirmaydi yoki to‘lov qilib bersa ham. Qilingan to‘lovlarni sug‘urtadan ko‘rsatilmagan yaqin qarindoshingizdan undirib oladi.
-      </div>
-    </div>
-  </div>
 
   <footer class="footer">
     <div class="container footer-flex">
@@ -234,8 +203,27 @@
       </form>
     </div>
   </div>
+  <!-- Phone code verification modal -->
+  <div id="phoneCodeModal" class="phone-code-modal">
+    <div class="phone-code-modal-content">
+      <button id="phoneCodeModalClose" class="phone-code-modal-close">&times;</button>
+      <div class="phone-code-modal-title">Kodni kiriting</div>
+      <div class="phone-code-modal-desc">
+        Telefonni tasdiqlash uchun <span id="modal-phone-number">+998 ** *** ** **</span> raqamiga kod yuborildi.
+      </div>
+      <div class="code-inputs-row">
+        <input type="text" maxlength="1" class="code-input" />
+        <input type="text" maxlength="1" class="code-input" />
+        <input type="text" maxlength="1" class="code-input" />
+        <input type="text" maxlength="1" class="code-input" />
+      </div>
+      <div id="code-timer" class="code-timer">30 Sekund</div>
+      <button id="codeConfirmBtn" class="code-confirm-btn" disabled>Tasdiqlash</button>
+    </div>
+  </div>
   <script type="module" src="js/lang.js"></script>
   <script src="js/script.js"></script> 
   <script src="js/osago.js"></script>
+  <script src="js/osagophone.js"></script>
 </body>
 </html>

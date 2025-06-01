@@ -1,0 +1,370 @@
+/* OSAGOPHONE SECTION STYLES */
+.osagophone-section {
+  background: #fff;
+  padding: 40px 0 80px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.osagophone-title-row {
+  margin-bottom: 20px; /* juda kichik */
+  display: flex;
+  align-items: baseline; /* chiziqqa yaqinlashtirish uchun */
+  gap: 2px; /* juda kichik */
+}
+.osagophone-title {
+  color: #02C463;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+.osagophone-clearance {
+  font-size: 32px;
+  font-weight: 700;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.osagophone-stepper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 48px;
+  width: 100%;
+  justify-content: flex-start;
+}
+.osagophone-step {
+  flex: 1 1 0;
+  height: 9px;
+  margin-top: 1px;
+  background: #02C463;
+  border-radius: 4px;
+  opacity: 1;
+  max-width: 200px;
+}
+.osagophone-step:not(.active) {
+  opacity: 0.3;
+}
+.osagophone-form-row {
+  display: flex;
+  gap: 118px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.osagophone-form-card {
+  background: #F3F5FC;
+  border-radius: 16px;
+  box-sizing: border-box;
+  border: 1.5px solid #E9ECF8;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.osagophone-phone-card {
+  padding: 18px 14px 18px 14px;
+  max-width: 425px;
+  width: 100%;
+}
+.osagophone-phone-label {
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+  display: block;
+}
+.osagophone-phone-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.osagophone-phone-prefix-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F3F5FC;
+  border: 2px solid #02C463;
+  border-radius: 9px;
+  font-size: 16px;
+  color: #222;
+  font-weight: 500;
+  width: 70px;
+  height: 44px;
+  box-sizing: border-box;
+}
+#phone-input {
+  border: 2px solid #02C463;
+  border-radius: 9px;
+  outline: none;
+  font-size: 16px;
+  background: #F3F5FC;
+  flex: 1;
+  height: 44px;
+  padding: 0 14px;
+  margin-left: 0;
+  box-sizing: border-box;
+}
+.osagophone-phone-checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.osagophone-privacy-label {
+  font-size: 12px;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.osagophone-phone-submit-btn {
+  width: 100%;
+  background: #BDBDBD;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 0;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: not-allowed;
+  transition: background 0.2s;
+}
+.osagophone-phone-submit-btn.enabled,
+.osagophone-phone-submit-btn:enabled {
+  background: #02C463;
+  cursor: pointer;
+}
+.osagophone-call-card {
+  padding: 14px 8px;
+  background: #F3F5FC;
+  border-radius: 16px;
+  min-width: 120px;         
+  max-width: 180px;         
+  width: auto;              
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  margin-right: 0;
+}
+.osagophone-call-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.osagophone-call-phone {
+  color: #02C463;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Phone code modal styles */
+.phone-code-modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(34, 34, 34, 0.32); /* darker overlay */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.phone-code-modal.active {
+  display: flex;
+}
+
+.phone-code-modal-content {
+  background: #F3F5FC;
+  border-radius: 18px;
+  padding: 22px 18px 18px 18px;
+  max-width: 350px;
+  width: 95vw;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 0;
+}
+
+.phone-code-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: #222;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 2;
+  transition: color 0.2s;
+}
+
+.phone-code-modal-close:hover {
+  color: #02C463;
+}
+
+.phone-code-modal-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #222;
+  text-align: left;
+}
+
+.phone-code-modal-desc {
+  font-size: 14px;
+  margin-bottom: 22px;
+  color: #222;
+  text-align: left;
+}
+
+.code-inputs-row {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.code-input {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 24px;
+  border: 2px solid #02C463;
+  border-radius: 10px;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+.code-input:focus {
+  outline: none;
+  border: 2px solid #02C463;
+  box-shadow: 0 0 0 2px #02c46333;
+}
+
+.code-timer {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 22px;
+  color: #000;
+}
+
+.code-confirm-btn {
+  width: 100%;
+  background: #BDBDBD;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 0;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: not-allowed;
+  transition: background 0.2s;
+}
+
+.code-confirm-btn.enabled,
+.code-confirm-btn:enabled {
+  background: #02C463;
+  cursor: pointer;
+}
+
+/* Responsive: OSAGO rasmiylashtirish yozuvi */
+@media (max-width: 1200px) {
+  .osagophone-title,
+  .osagophone-clearance {
+    font-size: 28px !important;
+  }
+}
+@media (max-width: 700px) {
+  .osagophone-title,
+  .osagophone-clearance {
+    font-size: 23px !important;
+  }
+  .osagophone-title-row {
+    margin-bottom: 10px !important;
+    gap: 1px !important;
+  }
+  .osagophone-form-row {
+  display: flex;
+  gap: 118px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.osagophone-form-row {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.osagophone-call-card {
+  width: 80% !important;
+  min-width: 0 !important;
+  max-width: 90% !important;
+  padding: 14px 8px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+}
+@media (max-width: 600px) {
+  .osagophone-title,
+  .osagophone-clearance {
+    font-size: 18px !important;
+  }
+  .osagophone-title-row {
+    margin-bottom: 10px !important;
+    gap: 0 !important;
+  }
+  .phone-code-modal-content {
+    max-width: 98vw;
+    padding: 12px 3vw 12px 3vw;
+    border-radius: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .osagophone-title,
+  .osagophone-clearance {
+    font-size: 20px !important;
+  }
+  .osagophone-title-row {
+    margin-bottom: 10px !important;
+    gap: 0 !important;
+  }
+}
+@media (max-width: 400px) {
+  .osagophone-title,
+  .osagophone-clearance {
+    font-size: 17px !important;
+  }
+  .osagophone-title-row {
+    margin-bottom: 10px !important;
+    gap: 0 !important;
+  }
+}

@@ -293,18 +293,42 @@ document.addEventListener('DOMContentLoaded', function() {
   if (polisContinueBtn) {
     polisContinueBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      // Faqat barcha inputlar va checkbox to'g'ri bo'lsa modal ochiladi
+      // Faqat barcha inputlar va checkbox to'g'ri bo'lsa sahifaga o'tkaziladi
       const type = document.getElementById('polis-type').value;
       const duration = document.getElementById('polis-duration').value;
       const date = document.getElementById('polis-date').value;
       const company = document.getElementById('polis-company').value;
       const agree = document.getElementById('polis-agree');
       if(type && duration && date && company && agree.checked) {
-        showPolisModal();
+        window.location.href = 'osagorelation.html';
+      }
+    });
+  }
+
+  // Checkbox belgilanganda ham modal chiqishi uchun
+  if (agree) {
+    agree.addEventListener('change', function() {
+      if (agree.checked) {
+        const type = document.getElementById('polis-type').value;
+        const duration = document.getElementById('polis-duration').value;
+        const date = document.getElementById('polis-date').value;
+        const company = document.getElementById('polis-company').value;
+        if(type && duration && date && company) {
+          showPolisModal();
+        }
       }
     });
   }
 });
+
+if (!window._soonBadgeInjected) {
+  window._soonBadgeInjected = true;
+  setTimeout(function() {
+    Array.from(document.getElementsByClassName('soon1')).forEach(function(el) {
+      el.innerHTML += '<div class="menu-soon-badge" style="display:none;" data-i18n="soon">Tez kunda<span class="menu-soon-arrow"></span></div>';
+    });
+  }, 1000);
+}
 
 document.getElementById('osagoInfoBtn').onclick = function() {
       document.getElementById('osagoInfoModal').style.display = 'flex';
@@ -316,3 +340,17 @@ document.getElementById('osagoInfoBtn').onclick = function() {
     document.getElementById('osagoInfoModal').onclick = function(e) {
       if (e.target === this) this.style.display = 'none';
     };
+   
+
+
+    // "Davom etish" tugmasi bosilganda osagophone.html sahifasiga o'tkazish
+    document.addEventListener('DOMContentLoaded', function() {
+      const continueBtn = document.querySelector('.continue-btn');
+      if (continueBtn) {
+        continueBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.location.href = 'osagophone.html';
+        });
+      }
+    });
+

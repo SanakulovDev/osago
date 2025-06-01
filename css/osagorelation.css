@@ -144,6 +144,7 @@ justify-content: end; */
 .osago-info-icon img {
   width: 16px;
   vertical-align: middle;
+  margin-left: 5px;
 }
 
 .osago-summary-title {
@@ -197,6 +198,7 @@ justify-content: end; */
   background: rgba(30, 41, 59, 0.18);
   justify-content: center;
   align-items: center;
+  padding: 0 10px;
 }
 
 .osago-info-modal-content {
@@ -214,6 +216,7 @@ justify-content: end; */
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .osago-info-modal-title {
@@ -282,16 +285,6 @@ justify-content: end; */
   .section-title,
   .section-clearance {
     font-size: 22px;
-  }
-  .osago-stepper {
-    gap: 10px;
-    margin-bottom: 22px;
-    margin-top: 14px;
-  }
-  .osago-step {
-    width: 60px;
-    height: 6px;
-    border-radius: 3px;
   }
   .osago-form-row {
     flex-direction: column;
