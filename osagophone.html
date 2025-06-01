@@ -99,24 +99,26 @@
         <!-- Phone input card -->
         <div class="osagophone-form-card osagophone-phone-card">
           <form id="phone-form" autocomplete="off">
-            <label for="phone-input" class="osagophone-phone-label">Davom etish uchun telefon raqamingizni kiriting</label>
+            <label for="phone-input" class="osagophone-phone-label" data-i18n="signinCardTitle"></label>
             <div class="osagophone-phone-input-row">
               <div class="osagophone-phone-prefix-box">+998</div>
-              <input id="phone-input" type="tel" placeholder="Telefon raqam" maxlength="9" required />
+              <input id="phone-input" type="tel" data-i18n-placeholder="signinPhonePlaceholder" maxlength="9" required />
             </div>
             <div class="osagophone-phone-checkbox-row">
               <input type="checkbox" id="privacy-checkbox" />
               <label for="privacy-checkbox" class="osagophone-privacy-label">
-                Avtorizatsiyadan o‘tish orqali siz <span style="color: #02C463;">shaxsiy ma’lumotlarni qayta ishlash siyosatiga rozilik bildirasiz</span>
+                <span data-i18n="signinCheckboxLabelStart"></span>
+                <span style="color: #02C463;" data-i18n="signinPolicyLink"></span>
+                <span data-i18n="signinCheckboxLabelEnd"></span>
               </label>
             </div>
-            <button type="submit" class="osagophone-phone-submit-btn" disabled>Davom etish</button>
+            <button type="submit" class="osagophone-phone-submit-btn" disabled data-i18n="signinBtn"></button>
           </form>
         </div>
         <!-- Call block -->
         <div class="osagophone-form-card osagophone-call-card">
-          <div class="osagophone-call-title">Qo‘ng‘iroq qiling:</div>
-          <a href="tel:+99877404040" class="osagophone-call-phone">+998 77 404 40 40</a>
+          <div class="osagophone-call-title" data-i18n="callTitle"></div>
+          <a href="tel:+99877404040" class="osagophone-call-phone" data-i18n="phone"></a>
         </div>
       </div>
     </div>
@@ -207,18 +209,16 @@
   <div id="phoneCodeModal" class="phone-code-modal">
     <div class="phone-code-modal-content">
       <button id="phoneCodeModalClose" class="phone-code-modal-close">&times;</button>
-      <div class="phone-code-modal-title">Kodni kiriting</div>
-      <div class="phone-code-modal-desc">
-        Telefonni tasdiqlash uchun <span id="modal-phone-number">+998 ** *** ** **</span> raqamiga kod yuborildi.
-      </div>
+      <div class="phone-code-modal-title" data-i18n="codeModalTitle"></div>
+      <div class="phone-code-modal-desc" data-i18n="codeModalDesc"></div>
       <div class="code-inputs-row">
-        <input type="text" maxlength="1" class="code-input" />
-        <input type="text" maxlength="1" class="code-input" />
-        <input type="text" maxlength="1" class="code-input" />
-        <input type="text" maxlength="1" class="code-input" />
+        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" />
+        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" />
+        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" />
+        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" />
       </div>
-      <div id="code-timer" class="code-timer">30 Sekund</div>
-      <button id="codeConfirmBtn" class="code-confirm-btn" disabled>Tasdiqlash</button>
+      <div id="code-timer" class="code-timer" data-i18n="timer"></div>
+      <button id="codeConfirmBtn" class="code-confirm-btn" disabled data-i18n="confirmBtn"></button>
     </div>
   </div>
   <script type="module" src="js/lang.js"></script>
