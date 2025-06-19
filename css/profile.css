@@ -289,6 +289,9 @@
   .profile-contact-phone {
     font-size: 16.5px;
   }
+  .exit-logo {
+    display: none;
+  }
 }
 @media (max-width: 700px) {
   .profile-main {
@@ -394,6 +397,10 @@
   .profile-menu {
     font-size: 15px;
     padding: 8px 16px;
+  }
+  .profile-avatar-id {
+    font-size: 11px;
+    translate: 0px -5px;
   }
   .logout-btn {
     font-size: 15px;
@@ -741,11 +748,17 @@
   .profile-info-title {
     font-size: 18px;
   }
+  .profile-avatar img {
+    translate: 0 -1px;
+  }
+  .profile-avatar-id {
+    translate: 0 -9px;
+  }
   .profile-label {
     font-size: 13px;
   }
   .profile-value {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 @media (max-width: 420px) {
@@ -756,7 +769,7 @@
     font-size: 12px;
   }
   .profile-value {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 

@@ -88,7 +88,7 @@ let currentBadge = null;
 
 serviceBtns.forEach(btn => {
     if (btn.id === 'towtruckBtn') return;
-    btn.addEventListener('click', function() {
+    btn.addEventListener('mouseover', function() {
         const card = btn.closest('.fast-service-card');
         const badge = card.querySelector('.soon-badge');
         if (currentBadge && currentBadge !== badge) {
@@ -113,10 +113,11 @@ let currentMenuBadge = null;
 
 menuItems.forEach((item, idx) => {
     if (idx === 0) return; // OSAGO uchun badge yo'q
-    item.addEventListener('click', function(e) {
+    item.addEventListener('mouseover', function(e) {
         const badge = item.querySelector('.menu-soon-badge');
         if (currentMenuBadge && currentMenuBadge !== badge) {
             currentMenuBadge.style.display = 'none';
+            currentMenuBadge.style.transition = '.3s';
         }
         if (badge) {
             badge.style.display = 'flex';

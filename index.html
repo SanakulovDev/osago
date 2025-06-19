@@ -135,7 +135,7 @@
   <section class="hero">
     <div class="container hero-flex">
       <div class="text">
-        <h1><span class="green" data-i18n="heroTitle">Sug’urta bo’yicha yagona sotuv bilan cheklanmagan marketplace</span></h1>
+        <h1><span class="green" data-i18n="heroTitle">Sug’urta bo’yicha <span>yagona sotuv bilan cheklanmagan</span> marketplace</span></h1>
         <p data-i18n="heroDesc">“Biz sug’urta sotuvi bilan cheklanmaymiz”</p>
         <a href="#" class="btn" data-i18n="heroBtn">Kirish</a>
       </div>
@@ -156,17 +156,27 @@
       </div>
       <div class="about-text">
         <span class="section-title" data-i18n="aboutTitle">Biz haqimizda</span>
-        <h2><span class="green" data-i18n="aboutSubtitle">Innovatsion Sug'urta Yechimlari</span></h2>
+        <h2 class="green" data-i18n="aboutSubtitle">Innovatsion <span>Sug'urta Yechimlari</span></h2>
         <p data-i18n="aboutDesc">Haqiqiy sug’urtaning ishlashini hohlab ushbu sayt ishga tushirildi va bu sayt orqali faqatgina ishonchli sug’urta kompaniyalarning sug’urta mahsulotlari sotuvi amalga oshiriladi.</p>
         <a href="#" class="btn" data-i18n="aboutBtn">Batafsil</a>
       </div>
     </div>
   </section>
 
-  <section class="partners">
-    <div class="container">
-      <h2 class="section-title green" data-i18n="partnersTitle">Hamkorlarimiz</h2>
+<section class="partners">
+  <div class="container" id="partners-heading-wrapper">
+    <h2 class="section-title-partn green" data-i18n="partnersTitle">Hamkorlarimiz</h2>
+  </div>
+
+  <div class="container" id="logos-container">
+    <div class="scroll-wrapper">
       <div class="partner-logos">
+        <img src="assets/images/logo1.png" alt="logo">
+        <img src="assets/images/logo2.png" alt="logo">
+        <img src="assets/images/logo3.png" alt="logo">
+        <img src="assets/images/logo4.png" alt="logo">
+        <img src="assets/images/logo5.png" alt="logo">
+        <!-- Takrorlangan logolar -->
         <img src="assets/images/logo1.png" alt="logo">
         <img src="assets/images/logo2.png" alt="logo">
         <img src="assets/images/logo3.png" alt="logo">
@@ -174,12 +184,13 @@
         <img src="assets/images/logo5.png" alt="logo">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="trust">
     <div class="container">
       <h2 class="trust-heading">
-        <span class="trust-green" data-i18n="trustWhy">Nega bizga ishonishingiz mumkin?</span>
+        <span class="trust-green" data-i18n="trustWhy">Nega bizga <span>ishonishingiz mumkin?</span></span>
       </h2>
       <br>
       <div class="trust-cards">
@@ -309,5 +320,6 @@
   </div>
   <script type="module" src="/js/lang.js"></script>
   <script src="/js/script.js"></script>
+  <script src="./js/swapper.js"></script>
 </body>
 </html>

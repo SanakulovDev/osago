@@ -19,7 +19,7 @@ function setLang(lang) {
 function updateTexts() {
   const lang = getLang();
   // HTML teglari bo'lishi mumkin bo'lgan kalitlar
-  const htmlKeys = ['codeModalDesc', 'timer', 'relativesInfo', 'soon'];
+  const htmlKeys = ['codeModalDesc', 'timer', 'relativesInfo', 'soon', 'logout', 'heroTitle', 'trustWhy', 'aboutSubtitle'];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (htmlKeys.includes(key) && translations[lang][key]) {
